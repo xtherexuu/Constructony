@@ -14,9 +14,9 @@ export const useTheme = () => {
         colors: {
           mode: "light",
           bg: "#fcfcfc",
-          color1: "#18427b",
-          color1light: "#225baa",
-          color2: "#112F59",
+          color1: "#296dcc",
+          color1light: "#3377d6",
+          color2: "#225baa",
           text1: "#000000",
           text2: "#242424",
           text3: "#333333",
