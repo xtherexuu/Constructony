@@ -18,9 +18,15 @@ import srcToPrize2020 from "../../../../utils/prize2020.png";
 import srcToPrize2021 from "../../../../utils/prize2021.png";
 import srcToPrize2022 from "../../../../utils/prize2022.png";
 import srcToPrize2023 from "../../../../utils/prize2023.png";
+import srcToPrize2020dark from "../../../../utils/prize2020dark.png";
+import srcToPrize2021dark from "../../../../utils/prize2021dark.png";
+import srcToPrize2022dark from "../../../../utils/prize2022dark.png";
+import srcToPrize2023dark from "../../../../utils/prize2023dark.png";
+import { useTheme } from "../../../../redux/useTheme";
 
 export const HomePage = () => {
   const [sliderScroll, setSliderScroll] = useState(0);
+  const theme = useTheme();
   return (
     <Wrapper>
       <SliderContainer>
@@ -113,19 +119,35 @@ export const HomePage = () => {
           </AwardScrollerItemText>
         </AwardScrollerItem>
         <AwardScrollerItem>
-          <AwardScrollerItemImage src={srcToPrize2023} />
+          <AwardScrollerItemImage
+            src={
+              theme.colors.mode === "dark" ? srcToPrize2023dark : srcToPrize2023
+            }
+          />
           <AwardScrollerItemText>#2 2023</AwardScrollerItemText>
         </AwardScrollerItem>
         <AwardScrollerItem>
-          <AwardScrollerItemImage src={srcToPrize2022} />
+          <AwardScrollerItemImage
+            src={
+              theme.colors.mode === "dark" ? srcToPrize2022dark : srcToPrize2022
+            }
+          />
           <AwardScrollerItemText>#1 2022</AwardScrollerItemText>
         </AwardScrollerItem>
         <AwardScrollerItem>
-          <AwardScrollerItemImage src={srcToPrize2021} />
+          <AwardScrollerItemImage
+            src={
+              theme.colors.mode === "dark" ? srcToPrize2021dark : srcToPrize2021
+            }
+          />
           <AwardScrollerItemText>#1 2021</AwardScrollerItemText>
         </AwardScrollerItem>
         <AwardScrollerItem>
-          <AwardScrollerItemImage src={srcToPrize2020} />
+          <AwardScrollerItemImage
+            src={
+              theme.colors.mode === "dark" ? srcToPrize2020dark : srcToPrize2020
+            }
+          />
           <AwardScrollerItemText>#3 2020</AwardScrollerItemText>
         </AwardScrollerItem>
       </Scroller>
