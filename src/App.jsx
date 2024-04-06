@@ -10,9 +10,14 @@ import { store } from "../redux/store.js";
 import { useTheme } from "../redux/useTheme.js";
 import { GlobalStyles } from "../style/GlobalStyles.js";
 import { MainLayout } from "./layouts/MainLayout";
+import { HomePage } from "./components/Pages/Home/index.jsx";
 
 const router = createBrowserRouter(
-  createRoutesFromElements(<Route path="/" element={<MainLayout />}></Route>)
+  createRoutesFromElements(
+    <Route path="/" element={<MainLayout />}>
+      <Route index element={<HomePage />} />
+    </Route>
+  )
 );
 
 function App() {
