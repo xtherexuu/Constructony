@@ -23,6 +23,7 @@ export const Header = styled.header`
   transition: background-color 0.5s;
   background-color: ${({ theme }) => theme.colors.bg};
   padding: 0 10px;
+  z-index: 10;
 `;
 
 export const HeaderNav = styled.nav``;

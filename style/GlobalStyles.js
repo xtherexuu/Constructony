@@ -19,4 +19,10 @@ export const GlobalStyles = createGlobalStyle`
     :root {
         font-size: 1em;
     }
+
+    @keyframes scroller {
+        to {
+            transform: translate(calc(-50% - 5px));
+        }
+    }
 `;

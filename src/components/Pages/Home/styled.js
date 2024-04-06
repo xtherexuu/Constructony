@@ -121,3 +121,21 @@ export const SlideText = styled.p`
   font-size: 0.7rem;
   text-align: center;
 `;
+
+export const AwardScrollerItem = styled.li`
+  display: flex;
+  gap: 5px;
+  flex-wrap: nowrap;
+  align-items: center;
+`;
+
+export const AwardScrollerItemImage = styled.img`
+  width: 40px;
+`;
+
+export const AwardScrollerItemText = styled.p`
+  display: flex;
+  width: max-content;
+  flex-wrap: nowrap;
+  font-weight: 600;
+`;

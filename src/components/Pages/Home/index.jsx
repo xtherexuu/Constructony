@@ -8,8 +8,16 @@ import {
   SlideText,
   SlideContent,
   SliderButton,
+  AwardScrollerItem,
+  AwardScrollerItemImage,
+  AwardScrollerItemText,
 } from "./styled";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
+import Scroller from "../../Scroller";
+import srcToPrize2020 from "../../../../utils/prize2020.png";
+import srcToPrize2021 from "../../../../utils/prize2021.png";
+import srcToPrize2022 from "../../../../utils/prize2022.png";
+import srcToPrize2023 from "../../../../utils/prize2023.png";
 
 export const HomePage = () => {
   const [sliderScroll, setSliderScroll] = useState(0);
@@ -97,8 +105,30 @@ export const HomePage = () => {
             </SlideContent>
           </SlideContainer>
         </SlidesContainer>
-        
       </SliderContainer>
+      <Scroller>
+        <AwardScrollerItem>
+          <AwardScrollerItemText>
+            Od 4 lat na podium w plebiscycie Mistrzowie Budownictwa!
+          </AwardScrollerItemText>
+        </AwardScrollerItem>
+        <AwardScrollerItem>
+          <AwardScrollerItemImage src={srcToPrize2023} />
+          <AwardScrollerItemText>#2 2023</AwardScrollerItemText>
+        </AwardScrollerItem>
+        <AwardScrollerItem>
+          <AwardScrollerItemImage src={srcToPrize2022} />
+          <AwardScrollerItemText>#1 2022</AwardScrollerItemText>
+        </AwardScrollerItem>
+        <AwardScrollerItem>
+          <AwardScrollerItemImage src={srcToPrize2021} />
+          <AwardScrollerItemText>#1 2021</AwardScrollerItemText>
+        </AwardScrollerItem>
+        <AwardScrollerItem>
+          <AwardScrollerItemImage src={srcToPrize2020} />
+          <AwardScrollerItemText>#3 2020</AwardScrollerItemText>
+        </AwardScrollerItem>
+      </Scroller>
     </Wrapper>
   );
 };
