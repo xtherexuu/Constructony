@@ -123,6 +123,7 @@ export const HomePage = () => {
             src={
               theme.colors.mode === "dark" ? srcToPrize2023dark : srcToPrize2023
             }
+            alt="This is image representation of prize which our company won in 2023 - Secound place in 'Mistrzowie Budownictwa' plebiscite."
           />
           <AwardScrollerItemText>#2 2023</AwardScrollerItemText>
         </AwardScrollerItem>
@@ -131,6 +132,7 @@ export const HomePage = () => {
             src={
               theme.colors.mode === "dark" ? srcToPrize2022dark : srcToPrize2022
             }
+            alt="This is image representation of prize which our company won in 2022 - First place in 'Mistrzowie Budownictwa' plebiscite."
           />
           <AwardScrollerItemText>#1 2022</AwardScrollerItemText>
         </AwardScrollerItem>
@@ -139,6 +141,7 @@ export const HomePage = () => {
             src={
               theme.colors.mode === "dark" ? srcToPrize2021dark : srcToPrize2021
             }
+            alt="This is image representation of prize which our company won in 2021 - First place in 'Mistrzowie Budownictwa' plebiscite."
           />
           <AwardScrollerItemText>#1 2021</AwardScrollerItemText>
         </AwardScrollerItem>
@@ -147,6 +150,7 @@ export const HomePage = () => {
             src={
               theme.colors.mode === "dark" ? srcToPrize2020dark : srcToPrize2020
             }
+            alt="This is image representation of prize which our company won in 2020 - Third place in 'Mistrzowie Budownictwa' plebiscite."
           />
           <AwardScrollerItemText>#3 2020</AwardScrollerItemText>
         </AwardScrollerItem>
