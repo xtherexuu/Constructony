@@ -11,6 +11,10 @@ import {
   AwardScrollerItem,
   AwardScrollerItemImage,
   AwardScrollerItemText,
+  SectionText,
+  SectionTextImportant,
+  SectionTextHighlight,
+  SectionTextLink,
 } from "./styled";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import Scroller from "../../Scroller";
@@ -22,7 +26,10 @@ import srcToPrize2020dark from "../../../../utils/prize2020dark.png";
 import srcToPrize2021dark from "../../../../utils/prize2021dark.png";
 import srcToPrize2022dark from "../../../../utils/prize2022dark.png";
 import srcToPrize2023dark from "../../../../utils/prize2023dark.png";
+import srcToAboutUsImage from "../../../../utils/aboutUsHomePageImage.png";
+
 import { useTheme } from "../../../../redux/useTheme";
+import Section from "./Section";
 
 export const HomePage = () => {
   const [sliderScroll, setSliderScroll] = useState(0);
@@ -155,6 +162,26 @@ export const HomePage = () => {
           <AwardScrollerItemText>#3 2020</AwardScrollerItemText>
         </AwardScrollerItem>
       </Scroller>
+      <Section
+        sectionHeading="Krótko o nas!"
+        headerImageSrc={srcToAboutUsImage}
+      >
+        <SectionText>
+          Jesteśmy firmą budowlaną z{" "}
+          <SectionTextImportant>
+            wieloletnim doświadczeniem
+          </SectionTextImportant>
+          , pasją do tworzenia i nieustannym dążeniem do doskonałości. Nasza
+          historia zaczyna się od marzenia o budowaniu nie tylko budynków, ale
+          także społeczności. Przez lata, nasza ekipa zdobyła doświadczenie w
+          każdym aspekcie budownictwa, od projektowania po realizację. W{" "}
+          <SectionTextHighlight>Constructony</SectionTextHighlight> wierzymy, że
+          każdy projekt jest szansą na wprowadzenie innowacji i doskonałości.
+          Chcesz wiedzieć więcej? <br /> Zapraszamy do odwiedzenia strony{" "}
+          <SectionTextLink to="/aboutus">"O nas"</SectionTextLink>, oraz naszego{" "}
+          <SectionTextLink to="/blog">bloga</SectionTextLink>, gdzie znajdziesz więcej informacji.
+        </SectionText>
+      </Section>
     </Wrapper>
   );
 };

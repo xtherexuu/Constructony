@@ -5,6 +5,7 @@ import srcToImgHouseImage from "../../../../utils/houseImage.png";
 import srcToImgHouseImage2 from "../../../../utils/houseImage2.png";
 import srcToImgHouseImage3 from "../../../../utils/houseImage3.png";
 import srcToClientHappy from "../../../../utils/clientHappy.png";
+import { Link } from "react-router-dom";
 
 export const Wrapper = styled.div`
   overflow-x: hidden;
@@ -138,4 +139,29 @@ export const AwardScrollerItemText = styled.p`
   width: max-content;
   flex-wrap: nowrap;
   font-weight: 600;
+`;
+
+export const SectionText = styled.p``;
+
+export const SectionTextImportant = styled.strong`
+  color: ${({ theme }) => theme.colors.color1};
+`;
+
+export const SectionTextHighlight = styled.b`
+  font-weight: normal;
+  color: ${({ theme }) => theme.colors.color1};
+`;
+
+export const SectionTextLink = styled(Link)`
+  cursor: pointer;
+  text-decoration: none;
+  color: ${({ theme }) => theme.colors.color2};
+  transition: 0.5s;
+  &:hover {
+    font-weight: bold;
+    color: ${({ theme }) => theme.colors.color1light};
+  }
+  &:visited {
+    color: ${({ theme }) => theme.colors.color1light};
+  }
 `;
