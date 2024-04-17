@@ -154,7 +154,7 @@ export const SectionTextHighlight = styled.b`
 
 export const SectionTextLink = styled(Link)`
   cursor: pointer;
-  text-decoration: none;
+  text-decoration: underline;
   color: ${({ theme }) => theme.colors.color2};
   transition: 0.5s;
   &:hover {
