@@ -230,7 +230,9 @@ export const FooterSiteInfoText = styled.p`
   }
 `;
 
-export const FooterAuthorContact = styled.div``;
+export const FooterAuthorContact = styled.address`
+  font-style: normal;
+`;
 
 export const FooterAuthorContactHeading = styled.h3`
   text-align: center;
