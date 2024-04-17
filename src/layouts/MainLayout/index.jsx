@@ -141,7 +141,7 @@ export const MainLayout = () => {
             <br />
             <b>This site is merely a template. </b>
             This site was created only for portfolio purposes. There is no
-            actual company named Constructiony, and you cannot order any
+            actual company named Constructony, and you cannot order any
             services here.
             <br />
             <br />
