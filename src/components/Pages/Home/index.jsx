@@ -15,6 +15,8 @@ import {
   SectionTextImportant,
   SectionTextHighlight,
   SectionTextLink,
+  Contact,
+  ContactElement,
 } from "./styled";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import Scroller from "../../Scroller";
@@ -27,9 +29,13 @@ import srcToPrize2021dark from "../../../../utils/prize2021dark.png";
 import srcToPrize2022dark from "../../../../utils/prize2022dark.png";
 import srcToPrize2023dark from "../../../../utils/prize2023dark.png";
 import srcToAboutUsImage from "../../../../utils/aboutUsHomePageImage.png";
+import srcToOurOffertImage from "../../../../utils/ourOffert.png";
+import srcToOurProjectsImage from "../../../../utils/ourProjects.png";
+import srcToContactImage from "../../../../utils/contact.png";
 
 import { useTheme } from "../../../../redux/useTheme";
 import Section from "./Section";
+import { MdCall, MdOutlineMailOutline } from "react-icons/md";
 
 export const HomePage = () => {
   const [sliderScroll, setSliderScroll] = useState(0);
@@ -165,6 +171,7 @@ export const HomePage = () => {
       <Section
         sectionHeading="Krótko o nas!"
         headerImageSrc={srcToAboutUsImage}
+        alt="On the image are our team that works at heights."
       >
         <SectionText>
           Jesteśmy firmą budowlaną z{" "}
@@ -179,8 +186,68 @@ export const HomePage = () => {
           każdy projekt jest szansą na wprowadzenie innowacji i doskonałości.
           Chcesz wiedzieć więcej? <br /> Zapraszamy do odwiedzenia strony{" "}
           <SectionTextLink to="/aboutus">"O nas"</SectionTextLink>, oraz naszego{" "}
-          <SectionTextLink to="/blog">bloga</SectionTextLink>, gdzie znajdziesz więcej informacji.
+          <SectionTextLink to="/blog">bloga</SectionTextLink>, gdzie znajdziesz
+          więcej informacji.
         </SectionText>
+      </Section>
+      <Section
+        sectionHeading="Nasza oferta!"
+        headerImageSrc={srcToOurOffertImage}
+        alt="On the image are two people from our building team. They are talking with eachoter."
+      >
+        <SectionText>
+          Witajcie w naszej ofercie!{" "}
+          <SectionTextImportant>Dzielimy się na segmenty</SectionTextImportant>:{" "}
+          <SectionTextHighlight>budowlany</SectionTextHighlight> i{" "}
+          <SectionTextHighlight>remontowy</SectionTextHighlight> dla{" "}
+          <SectionTextHighlight>klientów indywidualnych</SectionTextHighlight>{" "}
+          oraz <SectionTextHighlight>komercyjny</SectionTextHighlight> dla
+          dużych projektów, takich jak budowa wieżowców czy zaawansowane
+          remonty. Już teraz możemy spełnić Wasze marzenia! <br /> Zapraszamy do
+          odwiedzenia{" "}
+          <SectionTextLink to="/offer">strony z naszą ofertą</SectionTextLink>!
+        </SectionText>
+      </Section>
+      <Section
+        sectionHeading="Nasze projekty!"
+        headerImageSrc={srcToOurProjectsImage}
+        alt="On the image is object what we built."
+      >
+        <SectionText>
+          Dzięki za zainteresowanie! <br /> W Constructony{" "}
+          <SectionTextImportant>jesteśmy dumni</SectionTextImportant> z naszych
+          projektów, które odzwierciedlają naszą pasję do tworzenia i innowacji.
+          <br />
+          Jeżeli chcesz zobaczyć co potrafimy zrobić, zapraszamy do odwiedzenia{" "}
+          <SectionTextLink to="/projects">
+            strony z naszymi projektami
+          </SectionTextLink>
+          .
+        </SectionText>
+      </Section>
+      <Section
+        sectionHeading="Kontakt!"
+        headerImageSrc={srcToContactImage}
+        alt="On the image are our contact team. People are talking via the internet."
+      >
+        <SectionText>
+          Chcesz się z nami skontaktować? <br />
+          Możesz użyć jednej z poniższych metod lub przejść na naszą{" "}
+          <SectionTextLink to="/contact">stronę kontaktową</SectionTextLink> i
+          wyświetlić więcej opcji.
+        </SectionText>
+        <Contact>
+          <ContactElement href="tel:123-456-789">
+            <MdCall />
+            <span>123&nbsp;456&nbsp;789</span>
+          </ContactElement>
+          <ContactElement href="mailto:contact@constructony.pl">
+            <MdOutlineMailOutline /> <span>contact@constructony.pl</span>
+          </ContactElement>
+          <ContactElement href="/contact">
+            Więcej możliwości kontaktu
+          </ContactElement>
+        </Contact>
       </Section>
     </Wrapper>
   );

@@ -165,3 +165,40 @@ export const SectionTextLink = styled(Link)`
     color: ${({ theme }) => theme.colors.color1light};
   }
 `;
+
+export const Contact = styled.address`
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 15px;
+  margin-top: 20px;
+`;
+
+export const ContactElement = styled.a`
+  &:nth-child(3) {
+    grid-column: 1 / -1;
+    display: flex;
+    justify-content: center;
+  }
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  background: linear-gradient(
+    25deg,
+    ${({theme}) => theme.colors.gradientDark} 0%,
+    ${({theme}) => theme.colors.gradientLight} 90%
+  );
+  padding: 7px;
+  font-size: 0.8rem;
+  color: white;
+  font-style: normal;
+  border-radius: 6px;
+  text-align: center;
+  & > svg {
+    width: 18px;
+    height: 18px;
+    justify-self: end;
+  }
+  & > span {
+    justify-self: center;
+  }
+`;
