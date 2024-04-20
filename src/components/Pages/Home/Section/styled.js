@@ -15,20 +15,6 @@ export const SectionHeader = styled.header`
   gap: 40px;
 `;
 
-export const HeaderHeading = styled.h2`
-  padding: 0 5px;
-  font-size: 1.25rem;
-  color: ${({ theme }) => theme.colors.text1};
-  position: relative;
-  & > svg {
-    position: absolute;
-    z-index: 0;
-    min-width: 100%;
-    bottom: -10px;
-    left: 0;
-  }
-`;
-
 export const HeaderImage = styled.img`
   width: 100%;
   height: 150px;
