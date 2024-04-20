@@ -171,7 +171,7 @@ export const HomePage = () => {
       <Section
         sectionHeading="Krótko o nas!"
         headerImageSrc={srcToAboutUsImage}
-        alt="On the image are our team that works at heights."
+        imageAlt="On the image are our team that works at heights."
       >
         <SectionText>
           Jesteśmy firmą budowlaną z{" "}
@@ -193,7 +193,7 @@ export const HomePage = () => {
       <Section
         sectionHeading="Nasza oferta!"
         headerImageSrc={srcToOurOffertImage}
-        alt="On the image are two people from our building team. They are talking with eachoter."
+        imageAlt="On the image are two people from our building team. They are talking with eachoter."
       >
         <SectionText>
           Witajcie w naszej ofercie!{" "}
@@ -211,7 +211,7 @@ export const HomePage = () => {
       <Section
         sectionHeading="Nasze projekty!"
         headerImageSrc={srcToOurProjectsImage}
-        alt="On the image is object what we built."
+        imageAlt="On the image is object what we built."
       >
         <SectionText>
           Dzięki za zainteresowanie! <br /> W Constructony{" "}
@@ -228,7 +228,7 @@ export const HomePage = () => {
       <Section
         sectionHeading="Kontakt!"
         headerImageSrc={srcToContactImage}
-        alt="On the image are our contact team. People are talking via the internet."
+        imageAlt="On the image are our contact team. People are talking via the internet."
       >
         <SectionText>
           Chcesz się z nami skontaktować? <br />
