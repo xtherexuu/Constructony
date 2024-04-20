@@ -8,7 +8,7 @@ import {
 } from "./styled";
 import { useTheme } from "../../../../../redux/useTheme";
 
-export default function Section({ children, sectionHeading, headerImageSrc }) {
+export default function Section({ children, sectionHeading, headerImageSrc, imageAlt }) {
   const theme = useTheme();
 
   return (
@@ -51,7 +51,7 @@ export default function Section({ children, sectionHeading, headerImageSrc }) {
             </defs>
           </svg>
         </HeaderHeading>
-        <HeaderImage src={headerImageSrc} />
+        <HeaderImage alt={imageAlt} src={headerImageSrc} />
       </SectionHeader>
       <SectionContent>{children}</SectionContent>
     </Wrapper>
