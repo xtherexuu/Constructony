@@ -334,7 +334,6 @@ export const SocialMediaLink = styled.a`
   display: flex;
   align-items: center;
   gap: 10px;
-  /* color: ${({ theme }) => theme.colors.text1}; */
   color: white;
   text-decoration: none;
   & > svg {
