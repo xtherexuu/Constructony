@@ -83,21 +83,21 @@ export const MainLayout = () => {
             </div>
             <span>Strona główna</span>
           </StyledNavLink>
-          <StyledNavLink to="about">
+          <StyledNavLink to="/aboutus">
             <div>
               <MdInfoOutline />
               <MdInfo />
             </div>
             <span>O nas</span>
           </StyledNavLink>
-          <StyledNavLink to="offert">
+          <StyledNavLink to="/offer">
             <div>
               <MdOutlineLocalOffer />
               <MdLocalOffer />
             </div>
             <span>Oferta</span>
           </StyledNavLink>
-          <StyledNavLink to="projects">
+          <StyledNavLink to="/projects">
             <div>
               <PiProjectorScreenChart />
               <PiProjectorScreenChartFill />
@@ -111,7 +111,7 @@ export const MainLayout = () => {
             </div>
             <span>Blog</span>
           </StyledNavLink>
-          <StyledNavLink to="contact">
+          <StyledNavLink to="/contact">
             <div>
               <MdOutlineContactPhone />
               <MdContactPhone />
@@ -141,8 +141,8 @@ export const MainLayout = () => {
             <br />
             <b>This site is merely a template. </b>
             This site was created only for portfolio purposes. There is no
-            actual company named Constructony, and you cannot order any
-            services here.
+            actual company named Constructony, and you cannot order any services
+            here.
             <br />
             <br />
             If you would like your company to have a similar website, you can
