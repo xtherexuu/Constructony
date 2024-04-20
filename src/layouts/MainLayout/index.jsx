@@ -257,7 +257,7 @@ export const MainLayout = () => {
             </SocialMedia>
             <SocialMedia>
               <SocialMediaDescription>Visit my website!</SocialMediaDescription>
-              <SocialMediaLink background="blue">
+              <SocialMediaLink background="blue" href="bartoszzaleski.com">
                 <MdOutlineWeb />
                 <SocialMediaText>bartoszzaleski.com</SocialMediaText>
               </SocialMediaLink>
