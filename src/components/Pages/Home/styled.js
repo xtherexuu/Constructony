@@ -119,7 +119,7 @@ export const SlideHeading = styled.h2`
 
 export const SlideText = styled.p`
   color: ${({ theme }) => theme.colors.text1};
-  font-size: 0.7rem;
+  font-size: 0.8rem;
   text-align: center;
 `;
 
