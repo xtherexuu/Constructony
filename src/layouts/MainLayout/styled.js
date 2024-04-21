@@ -9,7 +9,6 @@ export const Wrapper = styled.div`
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: auto 1fr auto;
-  grid-gap: 10px;
 `;
 
 export const Header = styled.header`
@@ -64,7 +63,7 @@ export const HamburgerMenuLine = styled.div`
 `;
 
 export const HamburgerMenu = styled.div`
-  height: calc(100vh - 53px);
+  height: calc(100vh - 50px);
   width: 100vw;
   position: fixed;
   top: 50px;
