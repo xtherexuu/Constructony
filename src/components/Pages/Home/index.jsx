@@ -11,7 +11,6 @@ import {
   AwardScrollerItem,
   AwardScrollerItemImage,
   AwardScrollerItemText,
-  Text,
   Contact,
   ContactElement,
 } from "./styled";
@@ -36,6 +35,7 @@ import { MdCall, MdOutlineMailOutline } from "react-icons/md";
 import TextImportant from "../../TextImportant";
 import TextHighlight from "../../TextHighlight";
 import TextLink from "../../TextLink";
+import TextComponent from "../../TextComponent";
 
 export const HomePage = () => {
   const [sliderScroll, setSliderScroll] = useState(0);
@@ -173,7 +173,7 @@ export const HomePage = () => {
         headerImageSrc={srcToAboutUsImage}
         imageAlt="On the image are our team that works at heights."
       >
-        <Text>
+        <TextComponent>
           Jesteśmy firmą budowlaną z{" "}
           <TextImportant>wieloletnim doświadczeniem</TextImportant>, pasją do
           tworzenia i nieustannym dążeniem do doskonałości. Nasza historia
@@ -186,14 +186,14 @@ export const HomePage = () => {
           <TextLink to="/aboutus">"O nas"</TextLink>, oraz naszego{" "}
           <TextLink to="/blog">bloga</TextLink>, gdzie znajdziesz więcej
           informacji.
-        </Text>
+        </TextComponent>
       </Section>
       <Section
         sectionHeading="Nasza oferta!"
         headerImageSrc={srcToOurOffertImage}
         imageAlt="On the image are two people from our building team. They are talking with eachoter."
       >
-        <Text>
+        <TextComponent>
           Witajcie w naszej ofercie!{" "}
           <TextImportant>Dzielimy się na segmenty</TextImportant>:{" "}
           <TextHighlight>budowlany</TextHighlight> i{" "}
@@ -203,33 +203,33 @@ export const HomePage = () => {
           jak budowa wieżowców czy zaawansowane remonty. Już teraz możemy
           spełnić Wasze marzenia! <br /> Zapraszamy do odwiedzenia{" "}
           <TextLink to="/offer">strony z naszą ofertą</TextLink>!
-        </Text>
+        </TextComponent>
       </Section>
       <Section
         sectionHeading="Nasze projekty!"
         headerImageSrc={srcToOurProjectsImage}
         imageAlt="On the image is object what we built."
       >
-        <Text>
+        <TextComponent>
           Dzięki za zainteresowanie! <br /> W Constructony{" "}
           <TextImportant>jesteśmy dumni</TextImportant> z naszych projektów,
           które odzwierciedlają naszą pasję do tworzenia i innowacji.
           <br />
           Jeżeli chcesz zobaczyć co potrafimy zrobić, zapraszamy do odwiedzenia{" "}
           <TextLink to="/projects">strony z naszymi projektami</TextLink>.
-        </Text>
+        </TextComponent>
       </Section>
       <Section
         sectionHeading="Kontakt!"
         headerImageSrc={srcToContactImage}
         imageAlt="On the image are our contact team. People are talking via the internet."
       >
-        <Text>
+        <TextComponent>
           Chcesz się z nami skontaktować? <br />
           Możesz użyć jednej z poniższych metod lub przejść na naszą{" "}
           <TextLink to="/contact">stronę kontaktową</TextLink> i wyświetlić
           więcej opcji.
-        </Text>
+        </TextComponent>
         <Contact>
           <ContactElement href="tel:123-456-789">
             <MdCall />

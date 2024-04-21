@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const Wrapper = styled.div`
+export const Wrapper = styled.section`
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -21,8 +21,4 @@ export const HeaderImage = styled.img`
   object-fit: cover;
 `;
 
-export const SectionContent = styled.article`
-  font-size: 0.85rem;
-  padding: 0 10px;
-  ${({ theme }) => theme.colors.text2};
-`;
+export const SectionContent = styled.span``;
