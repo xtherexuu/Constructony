@@ -143,29 +143,6 @@ export const AwardScrollerItemText = styled.p`
 
 export const SectionText = styled.p``;
 
-export const SectionTextImportant = styled.strong`
-  color: ${({ theme }) => theme.colors.color1};
-`;
-
-export const SectionTextHighlight = styled.b`
-  font-weight: normal;
-  color: ${({ theme }) => theme.colors.color1};
-`;
-
-export const SectionTextLink = styled(Link)`
-  cursor: pointer;
-  text-decoration: underline;
-  color: ${({ theme }) => theme.colors.color2};
-  transition: 0.5s;
-  &:hover {
-    font-weight: bold;
-    color: ${({ theme }) => theme.colors.color1light};
-  }
-  &:visited {
-    color: ${({ theme }) => theme.colors.color1light};
-  }
-`;
-
 export const Contact = styled.address`
   display: grid;
   grid-template-columns: auto auto;
@@ -184,8 +161,8 @@ export const ContactElement = styled.a`
   align-items: center;
   background: linear-gradient(
     25deg,
-    ${({theme}) => theme.colors.gradientDark} 0%,
-    ${({theme}) => theme.colors.gradientLight} 90%
+    ${({ theme }) => theme.colors.gradientDark} 0%,
+    ${({ theme }) => theme.colors.gradientLight} 90%
   );
   padding: 7px;
   font-size: 0.8rem;

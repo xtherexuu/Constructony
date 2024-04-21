@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import {
   SlideContainer,
   SliderContainer,
@@ -12,9 +12,6 @@ import {
   AwardScrollerItemImage,
   AwardScrollerItemText,
   SectionText,
-  SectionTextImportant,
-  SectionTextHighlight,
-  SectionTextLink,
   Contact,
   ContactElement,
 } from "./styled";
@@ -36,6 +33,9 @@ import srcToContactImage from "../../../../utils/contact.png";
 import { useTheme } from "../../../../redux/useTheme";
 import Section from "./Section";
 import { MdCall, MdOutlineMailOutline } from "react-icons/md";
+import TextImportant from "../../TextImportant";
+import TextHighlight from "../../TextHighlight";
+import TextLink from "../../TextLink";
 
 export const HomePage = () => {
   const [sliderScroll, setSliderScroll] = useState(0);
@@ -175,19 +175,17 @@ export const HomePage = () => {
       >
         <SectionText>
           Jesteśmy firmą budowlaną z{" "}
-          <SectionTextImportant>
-            wieloletnim doświadczeniem
-          </SectionTextImportant>
-          , pasją do tworzenia i nieustannym dążeniem do doskonałości. Nasza
-          historia zaczyna się od marzenia o budowaniu nie tylko budynków, ale
-          także społeczności. Przez lata, nasza ekipa zdobyła doświadczenie w
-          każdym aspekcie budownictwa, od projektowania po realizację. W{" "}
-          <SectionTextHighlight>Constructony</SectionTextHighlight> wierzymy, że
-          każdy projekt jest szansą na wprowadzenie innowacji i doskonałości.
-          Chcesz wiedzieć więcej? <br /> Zapraszamy do odwiedzenia strony{" "}
-          <SectionTextLink to="/aboutus">"O nas"</SectionTextLink>, oraz naszego{" "}
-          <SectionTextLink to="/blog">bloga</SectionTextLink>, gdzie znajdziesz
-          więcej informacji.
+          <TextImportant>wieloletnim doświadczeniem</TextImportant>, pasją do
+          tworzenia i nieustannym dążeniem do doskonałości. Nasza historia
+          zaczyna się od marzenia o budowaniu nie tylko budynków, ale także
+          społeczności. Przez lata, nasza ekipa zdobyła doświadczenie w każdym
+          aspekcie budownictwa, od projektowania po realizację. W{" "}
+          <TextHighlight>Constructony</TextHighlight> wierzymy, że każdy projekt
+          jest szansą na wprowadzenie innowacji i doskonałości. Chcesz wiedzieć
+          więcej? <br /> Zapraszamy do odwiedzenia strony{" "}
+          <TextLink to="/aboutus">"O nas"</TextLink>, oraz naszego{" "}
+          <TextLink to="/blog">bloga</TextLink>, gdzie znajdziesz więcej
+          informacji.
         </SectionText>
       </Section>
       <Section
@@ -197,15 +195,14 @@ export const HomePage = () => {
       >
         <SectionText>
           Witajcie w naszej ofercie!{" "}
-          <SectionTextImportant>Dzielimy się na segmenty</SectionTextImportant>:{" "}
-          <SectionTextHighlight>budowlany</SectionTextHighlight> i{" "}
-          <SectionTextHighlight>remontowy</SectionTextHighlight> dla{" "}
-          <SectionTextHighlight>klientów indywidualnych</SectionTextHighlight>{" "}
-          oraz <SectionTextHighlight>komercyjny</SectionTextHighlight> dla
-          dużych projektów, takich jak budowa wieżowców czy zaawansowane
-          remonty. Już teraz możemy spełnić Wasze marzenia! <br /> Zapraszamy do
-          odwiedzenia{" "}
-          <SectionTextLink to="/offer">strony z naszą ofertą</SectionTextLink>!
+          <TextImportant>Dzielimy się na segmenty</TextImportant>:{" "}
+          <TextHighlight>budowlany</TextHighlight> i{" "}
+          <TextHighlight>remontowy</TextHighlight> dla{" "}
+          <TextHighlight>klientów indywidualnych</TextHighlight> oraz{" "}
+          <TextHighlight>komercyjny</TextHighlight> dla dużych projektów, takich
+          jak budowa wieżowców czy zaawansowane remonty. Już teraz możemy
+          spełnić Wasze marzenia! <br /> Zapraszamy do odwiedzenia{" "}
+          <TextLink to="/offer">strony z naszą ofertą</TextLink>!
         </SectionText>
       </Section>
       <Section
@@ -215,14 +212,11 @@ export const HomePage = () => {
       >
         <SectionText>
           Dzięki za zainteresowanie! <br /> W Constructony{" "}
-          <SectionTextImportant>jesteśmy dumni</SectionTextImportant> z naszych
-          projektów, które odzwierciedlają naszą pasję do tworzenia i innowacji.
+          <TextImportant>jesteśmy dumni</TextImportant> z naszych projektów,
+          które odzwierciedlają naszą pasję do tworzenia i innowacji.
           <br />
           Jeżeli chcesz zobaczyć co potrafimy zrobić, zapraszamy do odwiedzenia{" "}
-          <SectionTextLink to="/projects">
-            strony z naszymi projektami
-          </SectionTextLink>
-          .
+          <TextLink to="/projects">strony z naszymi projektami</TextLink>.
         </SectionText>
       </Section>
       <Section
@@ -233,8 +227,8 @@ export const HomePage = () => {
         <SectionText>
           Chcesz się z nami skontaktować? <br />
           Możesz użyć jednej z poniższych metod lub przejść na naszą{" "}
-          <SectionTextLink to="/contact">stronę kontaktową</SectionTextLink> i
-          wyświetlić więcej opcji.
+          <TextLink to="/contact">stronę kontaktową</TextLink> i wyświetlić
+          więcej opcji.
         </SectionText>
         <Contact>
           <ContactElement href="tel:123-456-789">
