@@ -146,6 +146,7 @@ export const Contact = styled.address`
   grid-template-columns: auto auto;
   gap: 15px;
   margin-top: 20px;
+  padding: 0 10px;
 `;
 
 export const ContactElement = styled.a`
