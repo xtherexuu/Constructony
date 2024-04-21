@@ -62,7 +62,9 @@ export const MainLayout = () => {
   return (
     <Wrapper>
       <Header>
-        <AppLogo />
+        <h1 style={{ margin: 0, display: "flex", alignItems: "center" }}>
+          <AppLogo />
+        </h1>
         <HamburgerMenuButton
           onClick={() => {
             setIsMenuOpened(!isMenuOpened);
