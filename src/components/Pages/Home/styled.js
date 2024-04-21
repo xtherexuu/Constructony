@@ -141,8 +141,6 @@ export const AwardScrollerItemText = styled.p`
   font-weight: 600;
 `;
 
-export const SectionText = styled.p``;
-
 export const Contact = styled.address`
   display: grid;
   grid-template-columns: auto auto;
