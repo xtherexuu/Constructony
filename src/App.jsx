@@ -12,12 +12,14 @@ import { GlobalStyles } from "../style/GlobalStyles.js";
 import { MainLayout } from "./layouts/MainLayout";
 import { HomePage } from "./components/Pages/Home/index.jsx";
 import About from "./components/Pages/About/index.jsx";
+import Offer from "./components/Pages/Offer/index.jsx";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<MainLayout />}>
       <Route index element={<HomePage />} />
       <Route path="aboutus" element={<About />} />
+      <Route path="offer" element={<Offer />} />
     </Route>
   )
 );
