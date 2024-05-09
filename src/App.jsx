@@ -14,6 +14,7 @@ import { HomePage } from "./components/Pages/Home/index.jsx";
 import About from "./components/Pages/About/index.jsx";
 import Offer from "./components/Pages/Offer/index.jsx";
 import Contact from "./components/Pages/Contact/index.jsx";
+import Projects from "./components/Pages/Projects/index.jsx";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -22,6 +23,7 @@ const router = createBrowserRouter(
       <Route path="aboutus" element={<About />} />
       <Route path="offer" element={<Offer />} />
       <Route path="contact" element={<Contact />} />
+      <Route path="projects" element={<Projects />} />
     </Route>
   )
 );
