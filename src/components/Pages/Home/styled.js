@@ -36,6 +36,10 @@ export const SliderButton = styled.button`
   & > svg {
     width: 25px;
     height: 40px;
+    color: ${({ theme }) => theme.colors.color1};
+  }
+  &:disabled > svg {
+    color: lightgray;
   }
 `;
 
