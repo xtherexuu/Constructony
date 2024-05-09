@@ -183,7 +183,7 @@ export const HomePage = () => {
           <TextHighlight>Constructony</TextHighlight> wierzymy, że każdy projekt
           jest szansą na wprowadzenie innowacji i doskonałości. Chcesz wiedzieć
           więcej? <br /> Zapraszamy do odwiedzenia strony{" "}
-          <TextLink to="/aboutus">"O nas"</TextLink>, oraz naszego{" "}
+          <TextLink to="/aboutus#header">"O nas"</TextLink>, oraz naszego{" "}
           <TextLink to="/blog">bloga</TextLink>, gdzie znajdziesz więcej
           informacji.
         </TextComponent>
@@ -202,7 +202,7 @@ export const HomePage = () => {
           <TextHighlight>komercyjny</TextHighlight> dla dużych projektów, takich
           jak budowa wieżowców czy zaawansowane remonty. Już teraz możemy
           spełnić Wasze marzenia! <br /> Zapraszamy do odwiedzenia{" "}
-          <TextLink to="/offer">strony z naszą ofertą</TextLink>!
+          <TextLink to="/offer#header">strony z naszą ofertą</TextLink>!
         </TextComponent>
       </Section>
       <Section
@@ -216,7 +216,8 @@ export const HomePage = () => {
           które odzwierciedlają naszą pasję do tworzenia i innowacji.
           <br />
           Jeżeli chcesz zobaczyć co potrafimy zrobić, zapraszamy do odwiedzenia{" "}
-          <TextLink to="/projects">strony z naszymi projektami</TextLink>.
+          <TextLink to="/projects#header">strony z naszymi projektami</TextLink>
+          .
         </TextComponent>
       </Section>
       <Section
@@ -227,8 +228,8 @@ export const HomePage = () => {
         <TextComponent>
           Chcesz się z nami skontaktować? <br />
           Możesz użyć jednej z poniższych metod lub przejść na naszą{" "}
-          <TextLink to="/contact">stronę kontaktową</TextLink> i wyświetlić
-          więcej opcji.
+          <TextLink to="/contact#header">stronę kontaktową</TextLink> i
+          wyświetlić więcej opcji.
         </TextComponent>
         <Contact>
           <ContactElement href="tel:123-456-789">
@@ -238,7 +239,7 @@ export const HomePage = () => {
           <ContactElement href="mailto:contact@constructony.pl">
             <MdOutlineMailOutline /> <span>contact@constructony.pl</span>
           </ContactElement>
-          <ContactElement href="/contact">
+          <ContactElement href="/contact#header">
             Więcej możliwości kontaktu
           </ContactElement>
         </Contact>
