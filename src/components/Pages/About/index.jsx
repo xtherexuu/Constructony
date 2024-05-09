@@ -35,7 +35,7 @@ export default function About() {
         <br />
         <br />W Constructony, stawiamy na innowacje. Dążymy do ciągłego
         doskonalenia naszych procesów i technologii, aby zapewnić najwyższą
-        jakość <TextLink to="offer">naszych usług</TextLink>.{" "}
+        jakość <TextLink to="/offer">naszych usług</TextLink>.{" "}
         <TextLink to="/projects">Nasze projekty</TextLink> są dowodem na nasze
         zaangażowanie w poszukiwanie nowych rozwiązań i dążenie do doskonałości.
         <br />
