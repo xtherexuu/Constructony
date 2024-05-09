@@ -4,7 +4,7 @@ import SectionHeading from "../../SectionHeading";
 
 export default function PageHeader({ text, imageUrl }) {
   return (
-    <StyledHeader>
+    <StyledHeader id="header">
       <HeaderImage src={imageUrl} />
       <HeaderHeadingContainer>
         <SectionHeading text={text} />
