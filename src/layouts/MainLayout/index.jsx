@@ -52,7 +52,7 @@ import {
   PiProjectorScreenChart,
   PiProjectorScreenChartFill,
 } from "react-icons/pi";
-import { Outlet } from "react-router-dom";
+import { Link, Outlet } from "react-router-dom";
 
 export const MainLayout = () => {
   const [isMenuOpened, setIsMenuOpened] = useState(false);
@@ -62,8 +62,10 @@ export const MainLayout = () => {
   return (
     <Wrapper>
       <Header>
-        <h1 style={{ margin: 0, display: "flex", alignItems: "center" }}>
-          <AppLogo />
+        <h1 style={{ margin: 0 }}>
+          <Link style={{ display: "flex", alignItems: "center" }} to="/">
+            <AppLogo />
+          </Link>
         </h1>
         <HamburgerMenuButton
           onClick={() => {
