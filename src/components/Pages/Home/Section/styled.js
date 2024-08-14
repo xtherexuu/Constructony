@@ -19,6 +19,11 @@ export const HeaderImage = styled.img`
   width: 100%;
   height: 150px;
   object-fit: cover;
+  @media (orientation: landscape) {
+    @media (min-height: 700px) {
+      height: 250px;
+    }
+  }
 `;
 
 export const SectionContent = styled.span``;

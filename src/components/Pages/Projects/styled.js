@@ -11,10 +11,18 @@ export const Project = styled.div`
 
 export const ProjectImage = styled.img`
   width: 100%;
-  padding: 0 10px;
+  padding: 10px;
   object-fit: cover;
   height: 150px;
-  border-radius: 6%;
+  border-radius: 16px;
+  @media (orientation: landscape) {
+    @media (min-height: 700px) {
+      height: 250px;
+    }
+    @media (min-height: 1000px) {
+      height: 300px;
+    }
+  }
 `;
 
 export const ProjectHeading = styled.h3`

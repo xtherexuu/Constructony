@@ -9,6 +9,10 @@ export const Wrapper = styled.div`
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: auto 1fr auto;
+  @media (min-width: 1000px) {
+    justify-content: center;
+    width: 100%;
+  }
 `;
 
 export const Header = styled.header`
@@ -39,6 +43,12 @@ export const HamburgerMenuButton = styled.button`
   gap: 5px;
   background-color: transparent;
   border: none;
+  @media (min-width: 1000px) {
+    gap: 6px;
+  }
+  @media (min-width: 1700px) {
+    gap: 8px;
+  }
 `;
 
 export const HamburgerMenuLine = styled.div`
@@ -60,6 +70,56 @@ export const HamburgerMenuLine = styled.div`
         transform: translateY(-8px) rotate(45deg);
       }
     `}
+  @media (min-width: 800px) {
+    width: 35px;
+    height: 4px;
+    ${({ isOpened }) =>
+      isOpened &&
+      css`
+        &:nth-child(1) {
+          transform: translateY(9px) rotate(-45deg);
+        }
+        &:nth-child(2) {
+          transform: translateX(calc(100% + 10px));
+        }
+        &:nth-child(3) {
+          transform: translateY(-9px) rotate(45deg);
+        }
+      `}
+  }
+  @media (min-width: 1000px) {
+    width: 40px;
+    ${({ isOpened }) =>
+      isOpened &&
+      css`
+        &:nth-child(1) {
+          transform: translateY(10px) rotate(-45deg);
+        }
+        &:nth-child(2) {
+          transform: translateX(calc(100% + 10px));
+        }
+        &:nth-child(3) {
+          transform: translateY(-10px) rotate(45deg);
+        }
+      `}
+  }
+  @media (min-width: 1700px) {
+    width: 45px;
+    height: 5px;
+    ${({ isOpened }) =>
+      isOpened &&
+      css`
+        &:nth-child(1) {
+          transform: translateY(13px) rotate(-45deg);
+        }
+        &:nth-child(2) {
+          transform: translateX(calc(100% + 10px));
+        }
+        &:nth-child(3) {
+          transform: translateY(-13px) rotate(45deg);
+        }
+      `}
+  }
 `;
 
 export const HamburgerMenu = styled.div`
@@ -75,13 +135,25 @@ export const HamburgerMenu = styled.div`
   align-items: center;
   gap: 15px;
   padding: 20px;
-  transition: left 0.5s, background-color 0.5s;
+  transition: left 0.5s ease-in-out, background-color 0.5s;
   ${({ isOpened }) =>
     isOpened &&
     css`
       left: 0;
     `}
   z-index: 10;
+  @media (min-width: 800px) {
+    height: calc(100vh - 65px);
+    top: 65px;
+  }
+  @media (min-width: 1000px) {
+    height: calc(100vh - 80px);
+    top: 80px;
+  }
+  @media (min-width: 1700px) {
+    height: calc(100vh - 95px);
+    top: 95px;
+  }
 `;
 
 export const StyledNavLink = styled(NavLink)`

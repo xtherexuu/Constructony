@@ -6,6 +6,14 @@ export const HeaderImage = styled.img`
   width: 100%;
   height: 200px;
   object-fit: cover;
+  @media (orientation: landscape) {
+    @media (min-height: 700px) {
+      height: 300px;
+    }
+    @media (min-height: 1000px) {
+      height: 400px;
+    }
+  }
 `;
 
 export const HeaderHeadingContainer = styled.div`

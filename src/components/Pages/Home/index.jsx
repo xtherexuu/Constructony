@@ -13,6 +13,13 @@ import {
   AwardScrollerItemText,
   Contact,
   ContactElement,
+  OpinionsSlieder,
+  OpinionContainer,
+  OpinionAuthor,
+  OpinionRating,
+  OpinionContent,
+  OpinionsContainer,
+  OpinionSliderButton,
 } from "./styled";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import Scroller from "../../Scroller";
@@ -28,6 +35,7 @@ import srcToAboutUsImage from "../../../../utils/aboutUsHomePageImage.png";
 import srcToOurOffertImage from "../../../../utils/ourOffert.png";
 import srcToOurProjectsImage from "../../../../utils/ourProjects.png";
 import srcToContactImage from "../../../../utils/contact.png";
+import srcToClientHappyImage from "../../../../utils/clientHappy.png";
 
 import { useTheme } from "../../../../redux/useTheme";
 import Section from "./Section";
@@ -40,6 +48,79 @@ import TextComponent from "../../TextComponent";
 export const HomePage = () => {
   const [sliderScroll, setSliderScroll] = useState(0);
   const theme = useTheme();
+  const opinions = [
+    {
+      id: 1,
+      name: "Jan Kowalski",
+      rate: 5,
+      opinion:
+        "Firma Constructony to absolutna rewelacja! Profesjonalne podejście, szybka realizacja, niezawodność na każdym etapie. Polecam gorąco!",
+    },
+    {
+      id: 2,
+      name: "Eleganckie Wnętrza Sp. z o.o.",
+      rate: 5,
+      opinion:
+        "Nasza firma korzystała z usług Constructony przy projektowaniu nowej siedziby. Efekty? Zadziwiające! Perfekcyjne dopasowanie do naszych potrzeb i oczekiwań.",
+    },
+    {
+      id: 3,
+      name: "Alicja Nowak",
+      rate: 5,
+      opinion:
+        "Nie mogłam sobie wymarzyć lepszego wykonawcy remontu mojego mieszkania. Constructony to gwarancja jakości i terminowości. Polecam z czystym sumieniem!",
+    },
+    {
+      id: 4,
+      name: "Salon Fryzjerski Luksus",
+      rate: 5,
+      opinion:
+        "Dzięki firmie Constructony nasz salon zyskał nowoczesny wygląd, który zachwyca naszych klientów. Profesjonalizm w każdym detalu!",
+    },
+    {
+      id: 5,
+      name: "Firma Handlowa Gama",
+      rate: 5,
+      opinion:
+        "Usługi firmy Constructony przerosły nasze oczekiwania. Bardzo elastyczne podejście do klienta, co w naszej branży jest niezwykle cenne.",
+    },
+    {
+      id: 6,
+      name: "Mateusz Kowalczyk",
+      rate: 5,
+      opinion:
+        "Dzięki pracy firmy Constructony, mój dom stał się prawdziwym miejscem relaksu i spokoju. Polecam każdemu, kto szuka rzetelnego wykonawcy!",
+    },
+    {
+      id: 7,
+      name: "Firma Budowa Marzeń",
+      rate: 5,
+      opinion:
+        "Jako firma budowlana polecamy Constructony. Solidność, terminowość i doskonałe wykonanie - to cechy, które wyróżniają tę firmę na rynku.",
+    },
+    {
+      id: 8,
+      name: "Anna Wiśniewska",
+      rate: 5,
+      opinion:
+        "Korzystałam z usług Constructony przy remoncie mojego mieszkania. Efekt? Perfekcja w każdym calu! Bardzo dziękuję za profesjonalizm i zaangażowanie.",
+    },
+    {
+      id: 9,
+      name: " Kawiarnia Kawa z Pasją",
+      rate: 5,
+      opinion:
+        "Dzięki współpracy z Constructony, nasza kawiarnia zyskała nowy, świeży wygląd, który przyciąga gości. Bardzo polecamy tę firmę!",
+    },
+    {
+      id: 10,
+      name: "Bartosz Nowicki",
+      rate: 5,
+      opinion:
+        "Jako klient korzystający z usług firmy Constructony, mogę śmiało polecić ich jako rzetelnego i profesjonalnego wykonawcę. Zawsze na czasie i zgodnie z oczekiwaniami.",
+    },
+  ];
+  const [opinionsScroll, setOpinionsScroll] = useState(5);
   return (
     <Wrapper>
       <SliderContainer>
@@ -219,6 +300,49 @@ export const HomePage = () => {
           <TextLink to="/projects#header">strony z naszymi projektami</TextLink>
           .
         </TextComponent>
+      </Section>
+      <Section
+        sectionHeading="Opinie!"
+        headerImageSrc={srcToClientHappyImage}
+        imageAlt="On the image are our clients who are smiling to the camera."
+      >
+        <TextComponent>
+          Chcesz poznać opinie naszych klientów o naszej firmie?
+          <br /> Przeczytaj kilka poniższych opinii udzielonych przez naszych
+          klientów -{" "}
+          <TextHighlight>
+            zarówno przedsiębiorstwa, jak i zwykłe osoby.
+          </TextHighlight>
+        </TextComponent>
+        <OpinionsSlieder>
+          <OpinionSliderButton
+            position="back"
+            disabled={opinionsScroll < 1}
+            onClick={() => {
+              setOpinionsScroll(opinionsScroll - 1);
+            }}
+          >
+            <IoIosArrowBack />
+          </OpinionSliderButton>
+          <OpinionSliderButton
+            position="forward"
+            disabled={opinionsScroll > opinions.length - 2}
+            onClick={() => {
+              setOpinionsScroll(opinionsScroll + 1);
+            }}
+          >
+            <IoIosArrowForward />
+          </OpinionSliderButton>
+          <OpinionsContainer scroll={opinionsScroll} amount={opinions.length}>
+            {opinions.map((opinion) => (
+              <OpinionContainer key={opinion.id}>
+                <OpinionAuthor>{opinion.name}</OpinionAuthor>
+                <OpinionRating>⭐⭐⭐⭐⭐</OpinionRating>
+                <OpinionContent>{opinion.opinion}</OpinionContent>
+              </OpinionContainer>
+            ))}
+          </OpinionsContainer>
+        </OpinionsSlieder>
       </Section>
       <Section
         sectionHeading="Kontakt!"

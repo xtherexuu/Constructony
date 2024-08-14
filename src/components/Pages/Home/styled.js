@@ -12,7 +12,7 @@ export const Wrapper = styled.div`
 `;
 
 export const SliderContainer = styled.div`
-  width: 100vw;
+  width: 100%;
   height: 40vh;
   background-color: wheat;
   position: relative;
@@ -40,6 +40,30 @@ export const SliderButton = styled.button`
   }
   &:disabled > svg {
     color: lightgray;
+  }
+  @media (min-width: 500px) {
+    & > svg {
+      width: 35px;
+      height: 45px;
+    }
+  }
+  @media (min-width: 500px) {
+    & > svg {
+      width: 35px;
+      height: 45px;
+    }
+  }
+  @media (min-width: 800px) {
+    & > svg {
+      width: 40px;
+      height: 45px;
+    }
+    @media (min-width: 1700px) {
+      & > svg {
+        width: 45px;
+        height: 50px;
+      }
+    }
   }
 `;
 
@@ -85,6 +109,22 @@ export const SlideContainer = styled.div`
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  @media (min-width: 500px) {
+    padding: 35px;
+  }
+  @media (min-width: 800px) {
+    padding: 40px;
+  }
+  @media (min-width: 1000px) {
+    width: calc(100svw - (0.2 * 100svw));
+  }
+  @media (min-width: 1300px) {
+    width: calc(100svw - (0.3 * 100svw));
+  }
+  @media (min-width: 1700px) {
+    width: calc(100svw - (0.4 * 100svw));
+    padding: 45px;
+  }
 `;
 
 export const SlideContent = styled.div`
@@ -181,4 +221,81 @@ export const ContactElement = styled.a`
   & > span {
     justify-self: center;
   }
+`;
+
+export const OpinionsSlieder = styled.div`
+  padding: 60px 40px 0;
+  overflow: hidden;
+  position: relative;
+`;
+
+export const OpinionSliderButton = styled.button`
+  background-color: transparent;
+  color: ${({ theme }) => theme.colors.color1};
+  border: none;
+  &:disabled {
+    color: lightgray;
+  }
+  height: 30px;
+  width: 30px;
+  position: absolute;
+  z-index: 3;
+  top: calc(50%);
+  transform: translateY(25%);
+  & > svg {
+    width: 100%;
+    height: 100%;
+  }
+  ${({ position }) =>
+    position === "back"
+      ? css`
+          left: 0px;
+        `
+      : css`
+          right: 0%;
+        `}
+  @media (min-width: 1000px) {
+    height: 40px;
+    width: 40px;
+  }
+`;
+
+export const OpinionsContainer = styled.div`
+  display: flex;
+  width: calc(
+    (100% * ${({ amount }) => amount}) + (40px * ${({ amount }) => amount})
+  );
+  gap: 50px;
+  overflow-x: hidden;
+  position: relative;
+  top: 0;
+  left: calc(
+    (-100% * ${({ scroll }) => scroll}) - (44px * ${({ scroll }) => scroll})
+  );
+  transition: left 0.5s;
+`;
+
+export const OpinionContainer = styled.div`
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-areas: "author rating" "opinion opinion";
+  width: 100%;
+  grid-gap: 5px 10px;
+`;
+
+export const OpinionAuthor = styled.p`
+  grid-area: author;
+  color: ${({ theme }) => theme.colors.color1light};
+  font-weight: 600;
+`;
+
+export const OpinionRating = styled.p`
+  grid-area: rating;
+  text-align: right;
+`;
+
+export const OpinionContent = styled.p`
+  grid-area: opinion;
+  font-size: 0.85rem;
+  color: ${({ theme }) => theme.colors.text1};
 `;
