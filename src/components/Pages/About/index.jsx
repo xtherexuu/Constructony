@@ -41,13 +41,6 @@ export default function About() {
           <TextLink to="/projects">Nasze projekty</TextLink> są dowodem na nasze
           zaangażowanie w poszukiwanie nowych rozwiązań i dążenie do
           doskonałości.
-          <br />
-          <br />
-          Zapraszamy do odwiedzenia{" "}
-          <TextLink to="/blog">naszego bloga</TextLink>, gdzie znajdziesz więcej
-          informacji na temat naszej firmy, naszych projektów i naszej misji. W{" "}
-          <TextHighlight>Constructony</TextHighlight>, budujemy przyszłość razem
-          z Tobą.
         </TextComponent>
       </AboutSection>
     </Wrapper>

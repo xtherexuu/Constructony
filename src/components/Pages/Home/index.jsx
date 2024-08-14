@@ -264,9 +264,8 @@ export const HomePage = () => {
           <TextHighlight>Constructony</TextHighlight> wierzymy, że każdy projekt
           jest szansą na wprowadzenie innowacji i doskonałości. Chcesz wiedzieć
           więcej? <br /> Zapraszamy do odwiedzenia strony{" "}
-          <TextLink to="/aboutus#header">"O nas"</TextLink>, oraz naszego{" "}
-          <TextLink to="/blog">bloga</TextLink>, gdzie znajdziesz więcej
-          informacji.
+          <TextLink to="/aboutus#header">"O nas"</TextLink>, gdzie znajdziesz
+          więcej informacji.
         </TextComponent>
       </Section>
       <Section

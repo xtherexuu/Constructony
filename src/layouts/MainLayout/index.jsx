@@ -43,8 +43,6 @@ import {
   MdInfo,
   MdOutlineLocalOffer,
   MdLocalOffer,
-  MdOutlineTipsAndUpdates,
-  MdTipsAndUpdates,
   MdOutlineContactPhone,
   MdContactPhone,
 } from "react-icons/md";
@@ -107,13 +105,6 @@ export const MainLayout = () => {
               <PiProjectorScreenChartFill />
             </div>
             <span>Projekty</span>
-          </StyledNavLink>
-          <StyledNavLink to="/blog">
-            <div>
-              <MdOutlineTipsAndUpdates />
-              <MdTipsAndUpdates />
-            </div>
-            <span>Blog</span>
           </StyledNavLink>
           <StyledNavLink to="/contact">
             <div>
