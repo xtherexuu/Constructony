@@ -49,6 +49,9 @@ export const HamburgerMenuButton = styled.button`
   @media (min-width: 1700px) {
     gap: 8px;
   }
+  @media (min-width: 3000px) {
+    gap: 12px;
+  }
 `;
 
 export const HamburgerMenuLine = styled.div`
@@ -120,6 +123,23 @@ export const HamburgerMenuLine = styled.div`
         }
       `}
   }
+  @media (min-width: 3000px) {
+    width: 70px;
+    height: 9px;
+    ${({ isOpened }) =>
+      isOpened &&
+      css`
+        &:nth-child(1) {
+          transform: translateY(21px) rotate(-45deg);
+        }
+        &:nth-child(2) {
+          transform: translateX(calc(100% + 10px));
+        }
+        &:nth-child(3) {
+          transform: translateY(-21px) rotate(45deg);
+        }
+      `}
+  }
 `;
 
 export const HamburgerMenu = styled.div`
@@ -145,6 +165,7 @@ export const HamburgerMenu = styled.div`
   @media (min-width: 800px) {
     height: calc(100vh - 65px);
     top: 65px;
+    gap: 20px;
   }
   @media (min-width: 1000px) {
     height: calc(100vh - 80px);
@@ -153,12 +174,20 @@ export const HamburgerMenu = styled.div`
   @media (min-width: 1700px) {
     height: calc(100vh - 95px);
     top: 95px;
+    gap: 25px;
+  }
+  @media (min-width: 2100px) {
+    gap: 30px;
+  }
+  @media (min-width: 3000px) {
+    height: calc(100vh - 150px);
+    top: 150px;
+    gap: 45px;
   }
 `;
 
 export const StyledNavLink = styled(NavLink)`
   color: ${({ theme }) => theme.colors.text1};
-  text-decoration: none;
   display: flex;
   gap: 5px;
   align-items: center;
@@ -185,12 +214,21 @@ export const StyledNavLink = styled(NavLink)`
       display: block;
     }
   }
+  @media (min-width: 1700px) {
+    gap: 10px;
+  }
+  @media (min-width: 3000px) {
+    gap: 15px;
+  }
 `;
 
 export const ThemeButtonContainer = styled.div`
   display: flex;
   align-items: center;
   gap: 10px;
+  @media (min-width: 3000px) {
+    gap: 20px;
+  }
 `;
 
 export const ThemeButtonDescription = styled.p``;
@@ -204,11 +242,27 @@ export const ThemeButton = styled.button`
   background-color: ${({ theme }) =>
     theme.colors.mode === "light" ? "#55b4e9" : "#1e1e1e"};
   transition: background-color 0.5s;
+  @media (min-width: 1700px) {
+    border-radius: 25px;
+    width: 85px;
+    height: 35px;
+  }
+  @media (min-width: 2100px) {
+    border-radius: 35px;
+    width: 110px;
+    height: 45px;
+  }
+  @media (min-width: 3000px) {
+    border-radius: 50px;
+    width: 150px;
+    height: 60px;
+  }
 `;
 
 export const ButtonCircle = styled.div`
   position: absolute;
-  top: 2px;
+  top: 50%;
+  transform: translateY(-50%);
   ${({ theme }) =>
     theme.colors.mode === "light" ? "left: 2px" : "left: calc(100% - 28px)"};
   width: 26px;
@@ -220,8 +274,9 @@ export const ButtonCircle = styled.div`
   &::after {
     content: "";
     position: absolute;
-    top: 4px;
-    left: 4px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     background-color: ${({ theme }) =>
       theme.colors.mode === "light" ? "#fff860" : "#5b5b5b"};
     width: 18px;
@@ -229,23 +284,85 @@ export const ButtonCircle = styled.div`
     border-radius: 50%;
     transition: background-color 0.5s;
   }
+  @media (min-width: 1700px) {
+    width: 28px;
+    height: 28px;
+    ${({ theme }) =>
+      theme.colors.mode === "light" ? "left: 4px" : "left: calc(100% - 32px)"};
+    &::after {
+      width: 18px;
+      height: 18px;
+    }
+  }
+  @media (min-width: 2100px) {
+    width: 36px;
+    height: 36px;
+    ${({ theme }) =>
+      theme.colors.mode === "light" ? "left: 4px" : "left: calc(100% - 40px)"};
+    &::after {
+      width: 24px;
+      height: 24px;
+    }
+  }
+  @media (min-width: 3000px) {
+    width: 46px;
+    height: 46px;
+    ${({ theme }) =>
+      theme.colors.mode === "light" ? "left: 6px" : "left: calc(100% - 52px)"};
+    &::after {
+      width: 28px;
+      height: 28px;
+    }
+  }
 `;
 
 export const ButtonStars = styled(WiStars)`
   position: absolute;
-  top: 2px;
+  top: 50%;
   left: 2px;
+  transform: translateY(-50%);
   fill: gold;
   width: 28px;
   height: 28px;
+  @media (min-width: 1700px) {
+    left: 4px;
+    width: 30px;
+    height: 30px;
+  }
+  @media (min-width: 2100px) {
+    left: 6px;
+    width: 36px;
+    height: 36px;
+  }
+  @media (min-width: 3000px) {
+    left: 6px;
+    width: 58px;
+    height: 58px;
+  }
 `;
 export const ButtonCloud = styled(FaCloud)`
   position: absolute;
-  top: 4px;
+  top: 50%;
   right: 6px;
+  transform: translateY(-50%);
   width: 21px;
   height: 21px;
   fill: white;
+  @media (min-width: 1700px) {
+    width: 24px;
+    height: 24px;
+    right: 7px;
+  }
+  @media (min-width: 2100px) {
+    width: 30px;
+    height: 30px;
+    right: 8px;
+  }
+  @media (min-width: 3000px) {
+    width: 40px;
+    height: 40px;
+    right: 10px;
+  }
 `;
 
 export const Footer = styled.footer`
@@ -254,6 +371,19 @@ export const Footer = styled.footer`
   padding: 10px 10px;
   grid-gap: 20px;
   border-top: solid 2px ${({ theme }) => theme.colors.color2};
+  @media (min-width: 1700px) {
+    padding: 20px 10px;
+    border-width: 4px;
+  }
+  @media (min-width: 2100px) {
+    border-width: 6px;
+    padding: 30px 10px;
+    grid-gap: 30px;
+  }
+  @media (min-width: 3000px) {
+    padding: 50px 10px;
+    grid-gap: 50px;
+  }
 `;
 
 export const FooterLogoSection = styled.div`
@@ -263,6 +393,9 @@ export const FooterLogoSection = styled.div`
   gap: 3px;
   flex-direction: column;
   color: ${({ theme }) => theme.colors.color1};
+  @media (min-width: 3000px) {
+    gap: 10px;
+  }
 `;
 
 export const FooterCopyrightName = styled.b`
@@ -271,6 +404,15 @@ export const FooterCopyrightName = styled.b`
 
 export const FooterLogo = styled.img`
   width: 40px;
+  @media (min-width: 1700px) {
+    width: 60px;
+  }
+  @media (min-width: 2100px) {
+    width: 80px;
+  }
+  @media (min-width: 3000px) {
+    width: 120px;
+  }
 `;
 
 export const FooterCopyrightInfo = styled.p`
@@ -297,12 +439,27 @@ export const FooterSiteInfoText = styled.p`
       left: 1px;
       width: 100%;
       height: 200%;
+      @media (min-width: 1700px) {
+        top: -7px;
+      }
+      @media (min-width: 2100px) {
+        top: -10px;
+      }
+      @media (min-width: 3000px) {
+        top: -15px;
+      }
     }
   }
 `;
 
 export const FooterAuthorContact = styled.address`
   font-style: normal;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  @media (min-width: 3000px) {
+    gap: 15px;
+  }
 `;
 
 export const FooterAuthorContactHeading = styled.h3`
@@ -343,9 +500,10 @@ export const FooterAuthorName = styled.p`
     z-index: -1;
     & > svg {
       position: absolute;
-      bottom: -8px;
+      bottom: -75%;
       left: 0;
       width: 100%;
+      height: 100%;
       z-index: -1;
     }
   }
@@ -357,6 +515,9 @@ export const FooterSocialMediaContainer = styled.div`
   justify-content: center;
   grid-gap: 10px;
   padding: 10px 0;
+  @media (min-width: 2100px) {
+    grid-gap: 20px;
+  }
 `;
 
 export const SocialMedia = styled.div`
@@ -372,7 +533,7 @@ export const SocialMediaDescription = styled.p`
 `;
 
 export const SocialMediaLink = styled.a`
-  padding: 5px 15px;
+  padding: 7px 15px;
   ${({ background }) =>
     background === "red"
       ? css`
@@ -400,16 +561,44 @@ export const SocialMediaLink = styled.a`
             rgba(12, 192, 221, 1) 100%
           );
         `}
-
   border-radius: 6px;
   display: flex;
   align-items: center;
   gap: 10px;
   color: white;
-  text-decoration: none;
   & > svg {
     width: 20px;
     height: 20px;
+  }
+  @media (min-width: 800px) {
+    padding: 10px 15px;
+  }
+  @media (min-width: 1000px) {
+    padding: 12px 20px;
+  }
+  @media (min-width: 1700px) {
+    border-radius: 12px;
+    padding: 17px 30px;
+    & > svg {
+      width: 25px;
+      height: 25px;
+    }
+  }
+  @media (min-width: 2100px) {
+    border-radius: 15px;
+    & > svg {
+      width: 35px;
+      height: 35px;
+    }
+  }
+  @media (min-width: 3000px) {
+    padding: 21px 50px;
+    gap: 20px;
+    border-radius: 25px;
+    & > svg {
+      width: 55px;
+      height: 55px;
+    }
   }
 `;
 

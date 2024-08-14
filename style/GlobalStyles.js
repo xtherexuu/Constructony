@@ -44,6 +44,12 @@ export const GlobalStyles = createGlobalStyle`
         @media (min-width: 1900px) {
             font-size: 1.55em;
         }
+        @media (min-width: 2100px) {
+          font-size: 1.75em;
+        }
+        @media (min-width: 3000px) {
+          font-size: 2.5em;
+        }
     }
 
     @keyframes scroller {

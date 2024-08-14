@@ -9,6 +9,19 @@ export const ContactSection = styled.address`
   align-items: center;
   margin: 20px 0;
   gap: 15px;
+  font-style: normal;
+  margin-top: 40px;
+  @media (min-width: 1700px) {
+    margin: 50px;
+  }
+  @media (min-width: 2100px) {
+    margin-top: 60px;
+    gap: 35px;
+  }
+  @media (min-width: 3000px) {
+    margin: 70px;
+    gap: 45px;
+  }
 `;
 
 export const ContactWrapper = styled.div`
@@ -87,6 +100,15 @@ export const ContactWrapper = styled.div`
       rgba(66, 114, 255, 1) 100%
     );
   }
+  @media (min-width: 1700px) {
+    gap: 10px;
+  }
+  @media (min-width: 2100px) {
+    gap: 15px;
+  }
+  @media (min-width: 3000px) {
+    gap: 20px;
+  }
 `;
 
 export const ContactDescription = styled.p`
@@ -94,15 +116,44 @@ export const ContactDescription = styled.p`
 `;
 
 export const ContactElement = styled.a`
-  padding: 15px;
+  padding: 10px;
   border-radius: 6px;
   color: white;
   display: grid;
   grid-template-columns: auto 1fr;
   align-items: center;
   & > svg {
-    width: 25px;
-    height: 25px;
+    width: 20px;
+    height: 20px;
+  }
+  @media (min-width: 800px) {
+    & > svg {
+      width: 25px;
+      height: 25px;
+    }
+  }
+  @media (min-width: 1700px) {
+    border-radius: 12px;
+    & > svg {
+      width: 30px;
+      height: 30px;
+    }
+  }
+  @media (min-width: 2100px) {
+    border-radius: 15px;
+    padding: 20px;
+    & > svg {
+      width: 40px;
+      height: 40px;
+    }
+  }
+  @media (min-width: 3000px) {
+    border-radius: 25px;
+    padding: 30px;
+    & > svg {
+      width: 50px;
+      height: 50px;
+    }
   }
 `;
 
@@ -124,19 +175,51 @@ export const ContactAddress = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-
+  @media (min-width: 1700px) {
+    border-radius: 12px;
+  }
+  @media (min-width: 2100px) {
+    border-radius: 15px;
+    padding: 25px 25px 40px;
+    & > svg {
+      position: absolute;
+      top: 25px;
+      left: 25px;
+    }
+  }
+  @media (min-width: 3000px) {
+    border-radius: 25px;
+    padding: 35px 35px 60px;
+    & > svg {
+      position: absolute;
+      top: 35px;
+      left: 35px;
+    }
+  }
 `;
 
 export const AddressInfo = styled.span`
   margin-top: 20px;
+  @media (min-width: 2100px) {
+    margin-top: 30px;
+  }
+  @media (min-width: 3000px) {
+    margin-top: 40px;
+  }
 `;
 
 export const Address = styled.p``;
 
 export const AdditionalInfo = styled.p`
-    text-align: center;
-    margin-top: 15px;
-    font-size: 0.85rem;
+  text-align: center;
+  margin-top: 15px;
+  font-size: 0.85rem;
+  @media (min-width: 2100px) {
+    margin-top: 30px;
+  }
+  @media (min-width: 3000px) {
+    margin-top: 40px;
+  }
 `;
 
 export const ContactInfo = styled.p`

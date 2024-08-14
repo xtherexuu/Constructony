@@ -11,4 +11,7 @@ export const Image = styled.img`
     @media (min-width: 1700px) {
         width: 95px;
     }
+    @media (min-width: 3000px) {
+        width: 150px;
+    }
 `;

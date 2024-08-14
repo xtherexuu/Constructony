@@ -8,6 +8,12 @@ export const Wrapper = styled.div`
   justify-content: center;
   color: white;
   text-align: center;
+  @media (min-width: 2100px) {
+    grid-gap: 30px;
+  }
+  @media (min-width: 3000px) {
+    grid-gap: 45px;
+  }
 `;
 
 export const SectionHeading = styled.h4`
@@ -17,7 +23,7 @@ export const SectionHeading = styled.h4`
 
 export const OfferContainer = styled.div`
   border-radius: 6px;
-  padding: 10px 20px;
+  padding: 20px;
   display: flex;
   flex-direction: column;
   background: #00000090 url(${({ bg }) => bg});
@@ -25,6 +31,20 @@ export const OfferContainer = styled.div`
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+  @media (min-width: 1700px) {
+    border-radius: 12px;
+    gap: 15px;
+  }
+  @media (min-width: 2100px) {
+    border-radius: 15px;
+    gap: 20px;
+    padding: 30px;
+  }
+  @media (min-width: 3000px) {
+    border-radius: 25px;
+    gap: 30px;
+    padding: 50px;
+  }
 `;
 
 export const OfferHeading = styled.h5`
@@ -75,4 +95,16 @@ export const OfferContactButton = styled(Link)`
   );
   border-radius: 6px;
   align-self: center;
+  @media (min-width: 1700px) {
+    border-radius: 12px;
+    padding: 10px 18px;
+  }
+  @media (min-width: 2100px) {
+    border-radius: 15px;
+    padding: 14px 22px;
+  }
+  @media (min-width: 3000px) {
+    border-radius: 25px;
+    padding: 18px 35px;
+  }
 `;

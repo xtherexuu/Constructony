@@ -22,13 +22,13 @@ export default function Contact() {
   return (
     <Wrapper>
       <PageHeader text="KONTAKT" imageUrl={srcToContactImage} />
-      <TextComponent align="center">
-        Witamy na naszej stronie kontaktowej! Jeśli masz pytania, chciałbyś
-        uzyskać więcej informacji na temat naszych usług lub dokonać zamówienia,
-        jesteśmy tutaj, aby Ci pomóc. Skontaktuj się z nami korzystając z jednej
-        z poniższych metod:
-      </TextComponent>
       <ContactSection>
+        <TextComponent align="center">
+          Witamy na naszej stronie kontaktowej! Jeśli masz pytania, chciałbyś
+          uzyskać więcej informacji na temat naszych usług lub dokonać
+          zamówienia, jesteśmy tutaj, aby Ci pomóc. Skontaktuj się z nami
+          korzystając z jednej z poniższych metod:
+        </TextComponent>
         <ContactWrapper>
           <ContactDescription>
             Zadzwoń do nas!

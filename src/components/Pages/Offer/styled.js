@@ -7,12 +7,27 @@ export const Wrapper = styled.article`
 export const OfferSection = styled.div`
   padding: 0 10px;
   margin-top: 40px;
+  @media (min-width: 1700px) {
+    margin-top: 50px;
+  }
+  @media (min-width: 2100px) {
+    margin-top: 60px;
+  }
+  @media (min-width: 3000px) {
+    margin-top: 70px;
+  }
 `;
 
 export const SectionHeading = styled.h3`
   font-size: 1.05rem;
   text-align: center;
   margin-bottom: 10px;
+  @media (min-width: 2100px) {
+    margin-bottom: 20px;
+  }
+  @media (min-width: 2100px) {
+    margin-bottom: 30px;
+  }
 `;
 
 export const ChoiceSection = styled.div`
@@ -25,9 +40,11 @@ export const StepComponent = styled.div`
   align-items: center;
   grid-gap: 10px;
   width: 100%;
-  & > button > svg {
-    width: 15px;
-    height: 50px;
+  @media (min-width: 2100px) {
+    margin: 15px 0;
+  }
+  @media (min-width: 3000px) {
+    margin: 55px 0;
   }
 `;
 
@@ -37,6 +54,28 @@ export const StepButton = styled.button`
   color: ${({ theme }) => theme.colors.color1light};
   &:disabled {
     color: gray;
+  }
+  & > svg {
+    width: 15px;
+    height: 50px;
+  }
+  @media (min-width: 1700px) {
+    & > svg {
+      width: 20px;
+      height: 60px;
+    }
+  }
+  @media (min-width: 2100px) {
+    & > svg {
+      width: 28px;
+      height: 70px;
+    }
+  }
+  @media (min-width: 3000px) {
+    & > svg {
+      width: 42px;
+      height: 80px;
+    }
   }
 `;
 
@@ -66,6 +105,14 @@ export const StepBar = styled.div`
   height: 5px;
   clip-path: xywh(0px 0px ${({ step }) => step}% 100% round 0% 5px 5px 0%);
   transition: clip-path 0.5s;
+  @media (min-width: 2100px) {
+    height: 8px;
+    border-radius: 8px;
+  }
+  @media (min-width: 3000px) {
+    height: 12px;
+    border-radius: 12px;
+  }
 `;
 
 export const StepInfo = styled.p`
@@ -75,4 +122,16 @@ export const StepInfo = styled.p`
   top: -17px;
   left: 0;
   width: 100%;
+  @media (min-width: 800px) {
+    top: -20px;
+  }
+  @media (min-width: 1700px) {
+    top: -25px;
+  }
+  @media (min-width: 2100px) {
+    top: -32px;
+  }
+  @media (min-width: 3000px) {
+    top: -45px;
+  }
 `;

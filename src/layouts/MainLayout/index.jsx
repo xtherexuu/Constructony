@@ -241,10 +241,10 @@ export const MainLayout = () => {
               <SocialMediaDescription>Send me an email!</SocialMediaDescription>
               <SocialMediaLink
                 background="green"
-                href="mailto:bartosz.zaleski.pv@gmail.com"
+                href="mailto:contact@bartoszzaleski.com"
               >
                 <MdOutlineMailOutline />
-                <SocialMediaText>bartosz.zaleski.pv@gmail.com</SocialMediaText>
+                <SocialMediaText>contact@bartoszzaleski.com</SocialMediaText>
               </SocialMediaLink>
             </SocialMedia>
             <SocialMedia>
@@ -253,15 +253,22 @@ export const MainLayout = () => {
               </SocialMediaDescription>
               <SocialMediaLink
                 background="red"
-                href="https://www.instagram.com/xtherexuu/"
+                href="https://www.instagram.com/im_zaleski/"
+                target="_blank"
+                rel="noopener"
               >
                 <FaInstagram />
-                <SocialMediaText>@xtherexuu</SocialMediaText>
+                <SocialMediaText>@im_zaleski</SocialMediaText>
               </SocialMediaLink>
             </SocialMedia>
             <SocialMedia>
               <SocialMediaDescription>Visit my website!</SocialMediaDescription>
-              <SocialMediaLink background="blue" href="bartoszzaleski.com">
+              <SocialMediaLink
+                background="blue"
+                href="https://bartoszzaleski.com"
+                target="_blank"
+                rel="noopener"
+              >
                 <MdOutlineWeb />
                 <SocialMediaText>bartoszzaleski.com</SocialMediaText>
               </SocialMediaLink>

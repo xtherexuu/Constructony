@@ -8,8 +8,31 @@ export const StyledSectionHeading = styled.h2`
   & > svg {
     position: absolute;
     z-index: 0;
-    min-width: 100%;
-    bottom: -10px;
+    width: 100%;
+    height: 100%;
+    bottom: -15px;
     left: 0;
+  }
+  @media (min-width: 500px) {
+    & > svg {
+      bottom: -20px;
+    }
+  }
+  @media (min-width: 1700px) {
+    & > svg {
+      bottom: -25px;
+    }
+  }
+  @media (min-width: 2100px) {
+    font-size: 1.5rem;
+    & > svg {
+      bottom: -35px;
+    }
+  }
+  @media (min-width: 3000px) {
+    font-size: 1.6rem;
+    & > svg {
+      bottom: -50px;
+    }
   }
 `;

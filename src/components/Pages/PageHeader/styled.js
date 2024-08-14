@@ -13,6 +13,12 @@ export const HeaderImage = styled.img`
     @media (min-height: 1000px) {
       height: 400px;
     }
+    @media (min-height: 1400px) {
+      height: 500px;
+    }
+    @media (min-height: 2000px) {
+      height: 600px;
+    }
   }
 `;
 

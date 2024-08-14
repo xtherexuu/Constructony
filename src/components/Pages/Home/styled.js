@@ -5,10 +5,10 @@ import srcToImgHouseImage from "../../../../utils/houseImage.png";
 import srcToImgHouseImage2 from "../../../../utils/houseImage2.png";
 import srcToImgHouseImage3 from "../../../../utils/houseImage3.png";
 import srcToClientHappy from "../../../../utils/clientHappy.png";
-import { Link } from "react-router-dom";
 
 export const Wrapper = styled.div`
   overflow-x: hidden;
+  width: 100%;
 `;
 
 export const SliderContainer = styled.div`
@@ -58,20 +58,23 @@ export const SliderButton = styled.button`
       width: 40px;
       height: 45px;
     }
-    @media (min-width: 1700px) {
-      & > svg {
-        width: 45px;
-        height: 50px;
-      }
+  }
+  @media (min-width: 1700px) {
+    & > svg {
+      width: 45px;
+      height: 50px;
+    }
+  }
+  @media (min-width: 3000px) {
+    & > svg {
+      width: 75px;
+      height: 85px;
     }
   }
 `;
 
-export const SliderSlidesButtonsContainer = styled.div``;
-
-export const SliderSlidesButton = styled.button``;
-
 export const SlidesContainer = styled.div`
+  width: 100%;
   display: flex;
   height: 40vh;
   position: absolute;
@@ -82,7 +85,7 @@ export const SlidesContainer = styled.div`
 `;
 
 export const SlideContainer = styled.div`
-  width: 100vw;
+  min-width: 100%;
   height: 40vh;
   display: flex;
   align-items: center;
@@ -115,15 +118,11 @@ export const SlideContainer = styled.div`
   @media (min-width: 800px) {
     padding: 40px;
   }
-  @media (min-width: 1000px) {
-    width: calc(100svw - (0.2 * 100svw));
-  }
-  @media (min-width: 1300px) {
-    width: calc(100svw - (0.3 * 100svw));
-  }
   @media (min-width: 1700px) {
-    width: calc(100svw - (0.4 * 100svw));
     padding: 45px;
+  }
+  @media (min-width: 3000px) {
+    padding: 75px;
   }
 `;
 
@@ -132,6 +131,20 @@ export const SlideContent = styled.div`
   padding: 10px;
   border-radius: 6px;
   backdrop-filter: blur(1px);
+  @media (min-width: 1000px) {
+    padding: 20px 30px;
+  }
+  @media (min-width: 1700px) {
+    border-radius: 12px;
+    padding: 35px 50px;
+  }
+  @media (min-width: 2100px) {
+    border-radius: 15px;
+    padding: 40px 70px;
+  }
+  @media (min-width: 3000px) {
+    border-radius: 25px;
+  }
 `;
 
 export const SlideHeading = styled.h2`
@@ -176,6 +189,21 @@ export const AwardScrollerItem = styled.li`
 
 export const AwardScrollerItemImage = styled.img`
   width: 40px;
+  @media (min-width: 800px) {
+    width: 55px;
+  }
+  @media (min-width: 1000px) {
+    width: 60px;
+  }
+  @media (min-width: 1700px) {
+    width: 70px;
+  }
+  @media (min-width: 2100px) {
+    width: 80px;
+  }
+  @media (min-width: 3000px) {
+    width: 100px;
+  }
 `;
 
 export const AwardScrollerItemText = styled.p`
@@ -221,6 +249,34 @@ export const ContactElement = styled.a`
   & > span {
     justify-self: center;
   }
+  @media (min-width: 800px) {
+    padding: 10px 15px;
+  }
+  @media (min-width: 1000px) {
+    padding: 12px 20px;
+  }
+  @media (min-width: 1700px) {
+    padding: 17px 30px;
+    border-radius: 12px;
+    & > svg {
+      width: 25px;
+      height: 25px;
+    }
+  }
+  @media (min-width: 2100px) {
+    border-radius: 15px;
+    & > svg {
+      width: 35px;
+      height: 35px;
+    }
+  }
+  @media (min-width: 3000px) {
+    border-radius: 25px
+    & > svg {
+      width: 45px;
+      height: 45px;
+    }
+  }
 `;
 
 export const OpinionsSlieder = styled.div`
@@ -240,7 +296,7 @@ export const OpinionSliderButton = styled.button`
   width: 30px;
   position: absolute;
   z-index: 3;
-  top: calc(50%);
+  top: 50%;
   transform: translateY(25%);
   & > svg {
     width: 100%;
@@ -258,6 +314,11 @@ export const OpinionSliderButton = styled.button`
     height: 40px;
     width: 40px;
   }
+  @media (min-width: 3000px) {
+    height: 60px;
+    width: 60px;
+    transform: translateY(0%);
+  }
 `;
 
 export const OpinionsContainer = styled.div`
@@ -273,6 +334,9 @@ export const OpinionsContainer = styled.div`
     (-100% * ${({ scroll }) => scroll}) - (44px * ${({ scroll }) => scroll})
   );
   transition: left 0.5s;
+  @media (min-width: 3000px) {
+    gap: 90px;
+  }
 `;
 
 export const OpinionContainer = styled.div`
