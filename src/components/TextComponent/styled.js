@@ -5,9 +5,9 @@ export const StyledText = styled.p`
   padding: 0 10px;
   ${({ theme }) => theme.colors.text2};
   @media (min-width: 2100px) {
-    margin-bottom: 10px;
+    margin: 10px 0;
   }
-  @media (min-width: 2100px) {
-    margin-bottom: 25px;
+  @media (min-width: 3000px) {
+    margin-bottom: 30px;
   }
 `;

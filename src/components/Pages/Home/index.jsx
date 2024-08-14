@@ -120,7 +120,7 @@ export const HomePage = () => {
         "Jako klient korzystający z usług firmy Constructony, mogę śmiało polecić ich jako rzetelnego i profesjonalnego wykonawcę. Zawsze na czasie i zgodnie z oczekiwaniami.",
     },
   ];
-  const [opinionsScroll, setOpinionsScroll] = useState(5);
+  const [opinionsScroll, setOpinionsScroll] = useState(0);
   return (
     <Wrapper>
       <SliderContainer>

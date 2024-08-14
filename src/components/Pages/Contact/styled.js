@@ -127,32 +127,33 @@ export const ContactElement = styled.a`
     height: 20px;
   }
   @media (min-width: 800px) {
+    padding: 10px 15px;
+  }
+  @media (min-width: 1000px) {
+    padding: 12px 20px;
+  }
+  @media (min-width: 1700px) {
+    border-radius: 12px;
+    padding: 17px 30px;
     & > svg {
       width: 25px;
       height: 25px;
     }
   }
-  @media (min-width: 1700px) {
-    border-radius: 12px;
-    & > svg {
-      width: 30px;
-      height: 30px;
-    }
-  }
   @media (min-width: 2100px) {
     border-radius: 15px;
-    padding: 20px;
     & > svg {
-      width: 40px;
-      height: 40px;
+      width: 35px;
+      height: 35px;
     }
   }
   @media (min-width: 3000px) {
+    padding: 21px 50px;
+    gap: 20px;
     border-radius: 25px;
-    padding: 30px;
     & > svg {
-      width: 50px;
-      height: 50px;
+      width: 55px;
+      height: 55px;
     }
   }
 `;

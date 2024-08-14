@@ -133,7 +133,7 @@ export const HamburgerMenuLine = styled.div`
           transform: translateY(21px) rotate(-45deg);
         }
         &:nth-child(2) {
-          transform: translateX(calc(100% + 10px));
+          transform: translateX(calc(100% + 11px));
         }
         &:nth-child(3) {
           transform: translateY(-21px) rotate(45deg);
@@ -216,8 +216,10 @@ export const StyledNavLink = styled(NavLink)`
   }
   @media (min-width: 1700px) {
     gap: 10px;
+    font-size: 1.1rem;
   }
   @media (min-width: 3000px) {
+    font-size: 1.3rem;
     gap: 15px;
   }
 `;
@@ -231,7 +233,14 @@ export const ThemeButtonContainer = styled.div`
   }
 `;
 
-export const ThemeButtonDescription = styled.p``;
+export const ThemeButtonDescription = styled.p`
+  @media (min-width: 1700px) {
+    font-size: 1.1rem;
+  }
+  @media (min-width: 3000px) {
+    font-size: 1.3rem;
+  }
+`;
 
 export const ThemeButton = styled.button`
   position: relative;
@@ -244,18 +253,18 @@ export const ThemeButton = styled.button`
   transition: background-color 0.5s;
   @media (min-width: 1700px) {
     border-radius: 25px;
-    width: 85px;
-    height: 35px;
+    width: 95px;
+    height: 40px;
   }
   @media (min-width: 2100px) {
     border-radius: 35px;
-    width: 110px;
-    height: 45px;
+    width: 120px;
+    height: 50px;
   }
   @media (min-width: 3000px) {
     border-radius: 50px;
-    width: 150px;
-    height: 60px;
+    width: 200px;
+    height: 80px;
   }
 `;
 
@@ -285,33 +294,33 @@ export const ButtonCircle = styled.div`
     transition: background-color 0.5s;
   }
   @media (min-width: 1700px) {
-    width: 28px;
-    height: 28px;
+    width: 32px;
+    height: 32px;
     ${({ theme }) =>
-      theme.colors.mode === "light" ? "left: 4px" : "left: calc(100% - 32px)"};
+      theme.colors.mode === "light" ? "left: 4px" : "left: calc(100% - 36px)"};
     &::after {
-      width: 18px;
-      height: 18px;
+      width: 22px;
+      height: 22px;
     }
   }
   @media (min-width: 2100px) {
-    width: 36px;
-    height: 36px;
+    width: 38px;
+    height: 38px;
     ${({ theme }) =>
-      theme.colors.mode === "light" ? "left: 4px" : "left: calc(100% - 40px)"};
+      theme.colors.mode === "light" ? "left: 6px" : "left: calc(100% - 44px)"};
     &::after {
-      width: 24px;
-      height: 24px;
+      width: 26px;
+      height: 26px;
     }
   }
   @media (min-width: 3000px) {
-    width: 46px;
-    height: 46px;
+    width: 62px;
+    height: 62px;
     ${({ theme }) =>
-      theme.colors.mode === "light" ? "left: 6px" : "left: calc(100% - 52px)"};
+      theme.colors.mode === "light" ? "left: 9px" : "left: calc(100% - 71px)"};
     &::after {
-      width: 28px;
-      height: 28px;
+      width: 40px;
+      height: 40px;
     }
   }
 `;
@@ -325,19 +334,19 @@ export const ButtonStars = styled(WiStars)`
   width: 28px;
   height: 28px;
   @media (min-width: 1700px) {
-    left: 4px;
-    width: 30px;
-    height: 30px;
+    left: 7px;
+    width: 32px;
+    height: 32px;
   }
   @media (min-width: 2100px) {
-    left: 6px;
-    width: 36px;
-    height: 36px;
+    left: 9px;
+    width: 40px;
+    height: 40px;
   }
   @media (min-width: 3000px) {
-    left: 6px;
-    width: 58px;
-    height: 58px;
+    left: 12px;
+    width: 75px;
+    height: 75px;
   }
 `;
 export const ButtonCloud = styled(FaCloud)`
@@ -349,19 +358,19 @@ export const ButtonCloud = styled(FaCloud)`
   height: 21px;
   fill: white;
   @media (min-width: 1700px) {
-    width: 24px;
-    height: 24px;
-    right: 7px;
+    width: 26px;
+    height: 26px;
+    right: 9px;
   }
   @media (min-width: 2100px) {
-    width: 30px;
-    height: 30px;
-    right: 8px;
+    width: 31px;
+    height: 31px;
+    right: 12px;
   }
   @media (min-width: 3000px) {
-    width: 40px;
-    height: 40px;
-    right: 10px;
+    width: 51px;
+    height: 51px;
+    right: 18px;
   }
 `;
 

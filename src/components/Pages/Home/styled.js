@@ -216,9 +216,15 @@ export const AwardScrollerItemText = styled.p`
 export const Contact = styled.address`
   display: grid;
   grid-template-columns: auto auto;
-  gap: 15px;
+  grid-gap: 15px;
   margin-top: 20px;
   padding: 0 10px;
+  @media (min-width: 2100px) {
+    grid-gap: 20px;
+  }
+  @media (min-width: 2100px) {
+    grid-gap: 30px;
+  }
 `;
 
 export const ContactElement = styled.a`
@@ -242,8 +248,8 @@ export const ContactElement = styled.a`
   border-radius: 6px;
   text-align: center;
   & > svg {
-    width: 18px;
-    height: 18px;
+    width: 20px;
+    height: 20px;
     justify-self: end;
   }
   & > span {
@@ -256,8 +262,8 @@ export const ContactElement = styled.a`
     padding: 12px 20px;
   }
   @media (min-width: 1700px) {
-    padding: 17px 30px;
     border-radius: 12px;
+    padding: 17px 30px;
     & > svg {
       width: 25px;
       height: 25px;
@@ -271,10 +277,12 @@ export const ContactElement = styled.a`
     }
   }
   @media (min-width: 3000px) {
-    border-radius: 25px
+    padding: 21px 50px;
+    gap: 20px;
+    border-radius: 25px;
     & > svg {
-      width: 45px;
-      height: 45px;
+      width: 50px;
+      height: 50px;
     }
   }
 `;
@@ -283,6 +291,15 @@ export const OpinionsSlieder = styled.div`
   padding: 60px 40px 0;
   overflow: hidden;
   position: relative;
+  @media (min-width: 1000px) {
+    padding: 60px 50px 0;
+  }
+  @media (min-width: 2100px) {
+    padding: 60px 60px 0;
+  }
+  @media (min-width: 3000px) {
+    padding: 60px 70px 0;
+  }
 `;
 
 export const OpinionSliderButton = styled.button`
@@ -314,6 +331,11 @@ export const OpinionSliderButton = styled.button`
     height: 40px;
     width: 40px;
   }
+  @media (min-width: 2100px) {
+    height: 50px;
+    width: 50px;
+    transform: translateY(10%);
+  }
   @media (min-width: 3000px) {
     height: 60px;
     width: 60px;
@@ -326,16 +348,40 @@ export const OpinionsContainer = styled.div`
   width: calc(
     (100% * ${({ amount }) => amount}) + (40px * ${({ amount }) => amount})
   );
-  gap: 50px;
-  overflow-x: hidden;
+  right: calc(
+    (-100% * ${({ scroll }) => scroll}) - (42px * ${({ scroll }) => scroll})
+  );
+  gap: 40px;
+  overflow: hidden;
   position: relative;
   top: 0;
-  left: calc(
-    (-100% * ${({ scroll }) => scroll}) - (44px * ${({ scroll }) => scroll})
-  );
   transition: left 0.5s;
+  @media (min-width: 1000px) {
+    width: calc(
+      (100% * ${({ amount }) => amount}) + (50px * ${({ amount }) => amount})
+    );
+    left: calc(
+      (-100% * ${({ scroll }) => scroll}) - (55px * ${({ scroll }) => scroll})
+    );
+    gap: 50px;
+  }
+  @media (min-width: 2100px) {
+    width: calc(
+      (100% * ${({ amount }) => amount}) + (60px * ${({ amount }) => amount})
+    );
+    left: calc(
+      (-100% * ${({ scroll }) => scroll}) - (66px * ${({ scroll }) => scroll})
+    );
+    gap: 60px;
+  }
   @media (min-width: 3000px) {
-    gap: 90px;
+    width: calc(
+      (100% * ${({ amount }) => amount}) + (70px * ${({ amount }) => amount})
+    );
+    left: calc(
+      (-100% * ${({ scroll }) => scroll}) - (78px * ${({ scroll }) => scroll})
+    );
+    gap: 70px;
   }
 `;
 
