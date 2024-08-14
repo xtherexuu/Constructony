@@ -21,7 +21,11 @@ import { FaLocationDot } from "react-icons/fa6";
 export default function Contact() {
   return (
     <Wrapper>
-      <PageHeader text="KONTAKT" imageUrl={srcToContactImage} />
+      <PageHeader
+        text="KONTAKT"
+        imageUrl={srcToContactImage}
+        alt="Obrazek przedstawia nasz zespół ds. marketingu i obsługi klienta podczas pracy."
+      />
       <ContactSection>
         <TextComponent align="center">
           Witamy na naszej stronie kontaktowej! Jeśli masz pytania, chciałbyś

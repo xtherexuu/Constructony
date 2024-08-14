@@ -18,7 +18,11 @@ import srcToHouseImage from "../../../../utils/houseImage.png";
 export default function Projects() {
   return (
     <Wrapper>
-      <PageHeader text="PROJEKTY" imageUrl={srcToOurProjectsImage} />
+      <PageHeader
+        text="PROJEKTY"
+        imageUrl={srcToOurProjectsImage}
+        alt="Obrazek przedstawia jeden z budynków, nad którym pracowaliśmy."
+      />
       <ProjectsContainer>
         <TextComponent align="center">
           Witaj w sekcji, w której możesz zapoznać się z naszymi osiągnięciami.
@@ -27,7 +31,10 @@ export default function Projects() {
         </TextComponent>
         <Project>
           <ProjectHeading>Fabryka Mercedes w Jaworze</ProjectHeading>
-          <ProjectImage src={srcToMercedesImage} />
+          <ProjectImage
+            src={srcToMercedesImage}
+            alt="Obrazek przedstawia Fabrykę Mercedes w Jaworze, nad którą pracowaliśmy."
+          />
           <TextComponent>
             <TextImportant>
               Zbudowaliśmy pierwszą w Polsce fabrykę silników i baterii
@@ -56,7 +63,10 @@ export default function Projects() {
         </Project>
         <Project>
           <ProjectHeading>Varso Tower</ProjectHeading>
-          <ProjectImage src={srcToVarsoTowerImage} />
+          <ProjectImage
+            src={srcToVarsoTowerImage}
+            alt="Obrazek przedstawia projekt Varso Tower, nad którym pracowaliśmy."
+          />
           <TextComponent>
             <TextImportant>
               Zbudowaliśmy kompleks budynków biurowych Varso Tower,
@@ -82,7 +92,10 @@ export default function Projects() {
         </Project>
         <Project>
           <ProjectHeading>Domek letniskowy</ProjectHeading>
-          <ProjectImage src={srcToHouseImage} />
+          <ProjectImage
+            src={srcToHouseImage}
+            alt="Obrazek przedstawia projekt domku letniskowego, nad którym pracowaliśmy."
+          />
           <TextComponent>
             <TextImportant>
               Zbudowaliśmy urokliwy domek letniskowy dla naszego klienta,

@@ -145,6 +145,7 @@ export const HamburgerMenuLine = styled.div`
 export const HamburgerMenu = styled.div`
   height: calc(100vh - 50px);
   width: 100vw;
+  visibility: hidden;
   position: fixed;
   top: 50px;
   left: 100%;
@@ -160,6 +161,7 @@ export const HamburgerMenu = styled.div`
     isOpened &&
     css`
       left: 0;
+      visibility: visible;
     `}
   z-index: 10;
   @media (min-width: 800px) {

@@ -125,6 +125,7 @@ export const HomePage = () => {
     <Wrapper>
       <SliderContainer>
         <SliderButton
+          aria-label="Przewiń pokaz slajdów do tyłu."
           direction="back"
           onClick={() => {
             setSliderScroll(sliderScroll - 1);
@@ -134,6 +135,7 @@ export const HomePage = () => {
           <IoIosArrowBack />
         </SliderButton>
         <SliderButton
+          aria-label="Przewiń pokaz slajdów do przodu."
           direction="forward"
           disabled={sliderScroll >= 5}
           onClick={() => {
@@ -315,6 +317,7 @@ export const HomePage = () => {
         </TextComponent>
         <OpinionsSlieder>
           <OpinionSliderButton
+            aria-label="Przewiń opinie do tyłu."
             position="back"
             disabled={opinionsScroll < 1}
             onClick={() => {
@@ -324,6 +327,7 @@ export const HomePage = () => {
             <IoIosArrowBack />
           </OpinionSliderButton>
           <OpinionSliderButton
+            aria-label="Przewiń opinie do przodu."
             position="forward"
             disabled={opinionsScroll > opinions.length - 2}
             onClick={() => {

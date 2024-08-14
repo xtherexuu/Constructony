@@ -87,7 +87,11 @@ export default function Offer() {
 
   return (
     <Wrapper>
-      <PageHeader text="OFERTA" imageUrl={srcToHeaderImage} />
+      <PageHeader
+        text="OFERTA"
+        imageUrl={srcToHeaderImage}
+        alt="Obrazek przedstawia dwójkę budowniczych na budowie, którzy ze sobą rozmawiają."
+      />
       <OfferSection>
         <SectionHeading>Powiedz nam w czym możemy pomóc!</SectionHeading>
         <TextComponent align="center">
@@ -99,6 +103,7 @@ export default function Offer() {
         <ChoiceSection>
           <StepComponent>
             <StepButton
+              aria-label="Przewiń etap wybierania oferty o jeden do tyłu."
               onClick={() => {
                 setStep((e) => ({
                   ...e,
@@ -124,6 +129,7 @@ export default function Offer() {
               />
             </StepContainer>
             <StepButton
+              aria-label="Przewiń etap wybierania oferty o jeden do przodu."
               onClick={() => {
                 setStep((e) => ({
                   ...e,

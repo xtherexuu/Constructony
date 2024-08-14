@@ -66,6 +66,7 @@ export const MainLayout = () => {
           </Link>
         </h1>
         <HamburgerMenuButton
+          aria-label={`${isMenuOpened ? "Zamknij" : "Otwórz"} menu z nawigacją`}
           onClick={() => {
             setIsMenuOpened(!isMenuOpened);
           }}
@@ -116,6 +117,9 @@ export const MainLayout = () => {
           <ThemeButtonContainer>
             <ThemeButtonDescription>Zmień motyw: </ThemeButtonDescription>
             <ThemeButton
+              aria-label={`Przełącz motyw strony na ${
+                theme.colors.mode === "light" ? "ciemny" : "jasny"
+              }`}
               onClick={() => {
                 dispatch(changeTheme());
               }}

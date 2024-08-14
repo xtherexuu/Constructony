@@ -10,7 +10,11 @@ import TextLink from "../../TextLink";
 export default function About() {
   return (
     <Wrapper>
-      <PageHeader text={"O NAS"} imageUrl={srcToAboutUsImage} />
+      <PageHeader
+        text={"O NAS"}
+        imageUrl={srcToAboutUsImage}
+        alt={"Obrazek przedstawia budowniczych, pracujących na rusztowaniu."}
+      />
       <AboutSection>
         <TextComponent>
           Jesteśmy firmą budowlaną z{" "}
