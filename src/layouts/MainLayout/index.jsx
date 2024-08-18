@@ -256,7 +256,7 @@ export const MainLayout = () => {
                 <SocialMediaText>@im_zaleski</SocialMediaText>
               </SocialMediaLink>
             </SocialMedia>
-            <SocialMedia>
+            {/* <SocialMedia>
               <SocialMediaDescription>Visit my website!</SocialMediaDescription>
               <SocialMediaLink
                 background="blue"
@@ -267,7 +267,7 @@ export const MainLayout = () => {
                 <MdOutlineWeb />
                 <SocialMediaText>bartoszzaleski.com</SocialMediaText>
               </SocialMediaLink>
-            </SocialMedia>
+            </SocialMedia> */}
           </FooterSocialMediaContainer>
         </FooterAuthorContact>
         <FooterLogoSection>

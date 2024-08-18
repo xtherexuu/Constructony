@@ -555,16 +555,16 @@ export const SocialMediaLink = styled.a`
             rgba(255, 87, 189, 1) 100%
           );
         `
-      : background === "blue"
-      ? css`
-          background: rgb(108, 23, 163);
-          background: linear-gradient(
-            45deg,
-            rgba(108, 23, 163, 1) 0%,
-            rgba(0, 185, 255, 1) 80%
-          );
-        `
-      : css`
+      : // : background === "blue"
+        // ? css`
+        //     background: rgb(108, 23, 163);
+        //     background: linear-gradient(
+        //       45deg,
+        //       rgba(108, 23, 163, 1) 0%,
+        //       rgba(0, 185, 255, 1) 80%
+        //     );
+        //   `
+        css`
           background: rgb(114, 234, 84);
           background: linear-gradient(
             45deg,
