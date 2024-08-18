@@ -79,35 +79,61 @@ export const MainLayout = () => {
       </Header>
       <>
         <HamburgerMenu isOpened={isMenuOpened}>
-          <StyledNavLink to="/" end>
+          <StyledNavLink
+            to="/"
+            end
+            onClick={() => {
+              setIsMenuOpened(false);
+            }}
+          >
             <div>
               <IoHomeOutline />
               <IoHome />
             </div>
             <span>Strona główna</span>
           </StyledNavLink>
-          <StyledNavLink to="/aboutus">
+          <StyledNavLink
+            to="/aboutus"
+            onClick={() => {
+              setIsMenuOpened(false);
+            }}
+          >
             <div>
               <MdInfoOutline />
               <MdInfo />
             </div>
             <span>O nas</span>
           </StyledNavLink>
-          <StyledNavLink to="/offer">
+          <StyledNavLink
+            to="/offer"
+            onClick={() => {
+              setIsMenuOpened(false);
+            }}
+          >
             <div>
               <MdOutlineLocalOffer />
               <MdLocalOffer />
             </div>
             <span>Oferta</span>
           </StyledNavLink>
-          <StyledNavLink to="/projects">
+          <StyledNavLink
+            to="/projects"
+            onClick={() => {
+              setIsMenuOpened(false);
+            }}
+          >
             <div>
               <PiProjectorScreenChart />
               <PiProjectorScreenChartFill />
             </div>
             <span>Projekty</span>
           </StyledNavLink>
-          <StyledNavLink to="/contact">
+          <StyledNavLink
+            to="/contact"
+            onClick={() => {
+              setIsMenuOpened(false);
+            }}
+          >
             <div>
               <MdOutlineContactPhone />
               <MdContactPhone />
